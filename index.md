@@ -42,7 +42,6 @@ Windows用户可以使用markdownpad软件打开本文件，Linux用户（你都
 
 ## Git的使用
 
-(以下内容2014.7.1晚9点后有效)
 
 1. 首先fork我们的项目
 2. 把fork过去的项目也就是你的项目clone到你的本地
