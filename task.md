@@ -6,13 +6,13 @@
 
 1. Section 1-data science: many skills 负责人 ：[]() []()  状态：待认领/进行中/完成
 2. chp1 About Data 负责人 ：[]() []()  状态：待认领/进行中/完成
-3. chp2 Identifying Data Problems 负责人 ：[]() []()  状态：待认领/进行中/完成
-4. chp3 Getting Started with R 负责人 ：[]() []()  状态：待认领/进行中/完成
-5. chp4 Follow the Data 负责人 ：[]() []()  状态：待认领/进行中/完成
-6. chp5 Rows and Columns 负责人 ：[]() []()  状态：待认领/进行中/完成
-7. chp6 Beer, Farms, and Peas 负责人 ：[]() []()  状态：待认领/进行中/完成
+3. chp2 Identifying Data Problems 负责人 ：[飞]() []()  状态：待认领/进行中/完成
+4. chp3 Getting Started with R 负责人 ：[乐果]() [vicky]()  状态：待认领/进行中/完成
+5. chp4 Follow the Data 负责人 ：[K风]() [觉]()  状态：待认领/进行中/完成
+6. chp5 Rows and Columns 负责人 ：[林思度]() []()  状态：待认领/进行中/完成
+7. chp6 Beer, Farms, and Peas 负责人 ：[燃芝]() []()  状态：待认领/进行中/完成
 8. chp7 Sample in a Jar 负责人 ：[]() []()  状态：待认领/进行中/完成
-9. chp8 Big Data? Big Deal! 负责人 ：[]() []()  状态：待认领/进行中/完成
+9. chp8 Big Data? Big Deal! 负责人 ：[tt]() []()  状态：待认领/进行中/完成
 
 ## 2014.7.12后任务
 
