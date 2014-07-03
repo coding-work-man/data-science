@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>第四章 跟着数据走</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>第四章 跟着数据走</h1>
+
+<h2>侦探这行有句谚语“跟着钱走。”在数据科学，成功的一个关键是“跟着数据走。”在多数情形，一个数据科学家不会去从无到有的设计一个信息系统。事实是，当我们拥有数据时，就会有几个或者许多已有的系统，数据科学家面临的很大一部分挑战就是如何整合这些系统。</h2>
+
+<p>我讨厌唠叨，但是你最近做过体检吗？如果你去看过医生，不管是为什么原因，你可能会记得医生的办公室被数据湮没了。首先，医生有大量的数字传感器，从血压监测器到超声波机器应有尽有，所有这些都会产生大量的数据。也许，对于现在引起广泛关注的关于健康保险的争论，金融和保险数据的一个很重要的出发点就可以是医生的办公室。美国医疗保健体系有一个著名的“特点”，就是我们的医疗保健服务的普遍做法是：按照流程付钱。但你在医生的办公室经历一次“流程”时，不管是一次咨询，一次检查，一次化验，或者其它什么，这是一系列会产生深远结果的数据事件的开端。</p>
+
+<p>如果你的医生是典型的医生，这些事件的起点是纸张形式的。你曾经详细的看过它们吗？它们的形式多半是由流程和代码组成的矩阵。虽然许多设备先进的地方可能会平板电脑或者其它电脑将这些形式数字化，但是纸张形式仍然是普遍存在的。如果要进行保单赔付或者付款，纸张形式的数据会被输进一个系统，这个过程会在医生办公室或者在一个外包公司里进行。</p>
+
+<p>这些流程数据去哪儿了呢？哪些其它种类的数据（比如病人账号信息）可以在接下来的流程中和它们连接？这些连在一起的数据形成了什么样的网络？或者它们的安全性如何？在这些数据到达保险公司之前，处理数据要多少步骤？保险公司在考虑理赔之前是怎样处理和分析数据的？当保险公司的系统同意理赔之后钱是怎么转账的？这些问题仅仅是从表面上考虑的：还有几十种上百种处理步骤我们连想都想不到。</p>
+
+<p>我们很容易从这个例子中看到，根本不可能把已有的系统扔掉，然后去设计一个更好的或者至少更标准化的系统。但是如果你的工作是提高系统的效率，或者审查保险理赔以确保它们和保险记录相符，或者使用数据去探测和预测疾病的爆发和流行，或者给顾客提供反馈告诉他们一些流程的期望花费是多少，那么你该怎么办呢？</p>
+
+<p>你的项目的关键的出发点在于要跟着数据走。你应该像一个侦探一样，充分的弄清楚细节，包括内容，格式，发送人，接收人，转账方法，仓库，还有过程中每一步数据的使用者以及进行数据处理和存储的组织。</p>
+
+<p>幸运的是，已经有一个广泛的研究和实践领域叫做“数据模型”，它给出理论，策略和工具以帮助实现数据科学家“跟着数据走”的目标。这些想法开始于70年代早期，是由计算机科学家Ed Yourdon提出的称之为数据流程图方法。一个更现代的方法叫做实体关系模型，它相关于实际中建立的关系型数据库。专家们使用这个模型发明了实体关系图（ERDs）用来描述一个系统的结构和数据的移动。</p>
+
+</body>
+
+</html>
+
