@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>罐子中的样本</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>罐子中的样本</h1>
+
+<p>抽样分布是理解统计推断的关键概念。为了理解随机性在抽样时所产生的影响，很多讲解抽样分布的方法都提到了从罐子中抽取弹球或糖果这样的经典例子。通过前面提到的美国人口的例子，我们可以清楚的看到尽管总体的分布不是正态的，但其样本均值的分布却服从正态分布。</p>
+
+<p>想象你拥有一个装满了红色和蓝色糖果的罐子。罐子中放入的红色糖果和蓝色糖果各有100颗，但这些糖果在放入罐中时是混合在一起的。如果你从罐中随机抽取8颗糖果，你会得到什么颜色的糖果？如果抽取如想象中般顺利的话（虽然通常都没那么走运），你将会抽到4颗红糖果和4颗蓝糖果。红的和蓝的各占一半，这个比例和罐中的红蓝比例是一样的。当然了，你很难抽到这个结果，是不？除了4红4蓝的组合，你也可能会抽到3颗红糖果和5颗蓝糖果，或者其他各种你能想到的组合。事实上，尽管概率很小，但你还是有可能抽中8颗红色的。虽然有多种可能，但仅就一次抽取结果来看，我们是无法预测会抽到红和蓝的哪种组合的。而这种不确定性，就是能够以无法预知的方式来影响你抽取结果的随机性的力量。</p>
+
+<p>我们现在提出一个有趣的想法，这虽然对预测单次抽取结果没什么帮助，但却能很好的展示多次抽取的*长期趋势*。从罐子中抽取8颗糖果，数一数其中有多少红色的，然后将所有的糖果都放回罐中。我们并不需要数蓝色糖果的数量，这是因为 <code>8 - 红色糖果的数量 = 蓝色糖果的数量</code>。将罐中的糖果晃动一下，这样能混合的更好一些，然后再抽取8颗糖果，同时数一下红色糖果的数量。将这种操作重复多次，我们可以对每次记录的结果用下面的表格来表示：
+<center></p>
+
+<table>
+   <tr>
+      <td>抽取次数</td>
+      <td>红色糖果的数量</td>
+   </tr>
+   <tr>
+      <td><center>1</td>
+      <td><center>5</td>
+
+   </tr>
+   <tr>
+      <td><center>2</td>
+      <td><center>3</td>
+   </tr>
+   <tr>
+      <td><center>3</td>
+      <td><center>6</td>
+   </tr>
+   <tr>
+      <td><center>4</td>
+      <td><center>2</td>
+   </tr>
+</table>
+
+<p></center></p>
+
+<p>注意到表格左边的列就是对抽取次数的计数而已。表格右边的列是我们感兴趣的内容，它列出了每次抽样中的红色糖果数量。在本例中，红色糖果的数量真是天南海北。在第4次抽样时，我们只抽到了两颗红色糖果，但是在第3次抽样时，我们却抽到了足足6颗红色糖果。但是本例最有趣的地方就是，如果你将这4次抽取的红色糖果数量进行<em>算术平均*，你会得到平均每次抽到*正好4颗红色糖果*的结果，而这正是我们期望的红蓝各半的罐子中应该抽出的结果。以上只是一个人为制造的例子，而我们在平时抽取时，很难在仅仅4次抽取之后就遇到这么好的平均的结果。但是如果你将随机抽取这一操作，进行了4000次，你将会肯定得到一个接近 **平均每次抽到4颗红色糖果</em>* 的完美结果。</p>
+
+<p>从总体中不断的抽取子集的过程称为“抽样”，而经过大量的抽样之后，我们会最终得到抽样分布。注意到，在刚才这句话中，我们用到了“总体”这个词汇，用来代表我们从什么地方做的抽样，这也是它的统计含义。在前面章节的例子中，我们的数据集包含美国各个州的人口数量，这个“人口”与“总体”同样使用英文单次 population 可以说是一个巧合。下面，我们使用 R 来帮助我们从美国各州人口数据集中抽取大量样本。</p>
+
+<p>R 中有一个很便捷的函数 sample()，可以用来从数据集中简便的抽取样本。我们可以用它来从我们的数据集中抽取样本：</p>
+
+<pre><code class="r">set.seed(31415)
+sample(USstatePops$V1, size = 16, replace = TRUE)
+</code></pre>
+
+<pre><code>##  [1]  1852994  4339367  3574097  2967297  2915918  4533372  1360301
+##  [8]  5773552  6724540  6346105  3574097  3751351  1052567 37253956
+## [15]   814180  3046355
+</code></pre>
+
+<p>(译者注：原著中并未使用set.seed()来设置随机的种子，这会导致读者的可重复性研究非常困难。在本章中我们统一将种子设置为31415。读者也如此设置，便可实现和我们相同的抽样结果。)在本例中，注意到我们调用的sample()函数含有三个参数。第一个参数是数据源。
+对于第二个和第三个参数，为了让 R 能够正确识别，我们采用了“命名参数”的方
+式来调用，而不是单靠这些参数在参数列中的位置。参数 <code>size = 16</code> 可以让 R 
+从总体中抽取16个州的人口作为样本。参数 <code>replace = TRUE</code> 则规定了一种统计
+学家经常用来简化数学证明的抽样方法。对我们来说，采取放回抽样还是不放回抽
+样通常没有实际的影响，所以我们直接使用统计学家的常用方法。</p>
+
+<p>相较于给抽取的各色糖果计数，我们在处理类似于各州人口的这类数值时，对其算数平均数，或者称为均值，更感兴趣。于是我们可以让 R 使用mean()来计算所抽取的样本均值：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(sample(USstatePops$V1, size = 16, replace = TRUE))
+</code></pre>
+
+<pre><code>## [1] 5617503
+</code></pre>
+
+<p>从上面的mean()函数可以看出，我们又遇到了函数的嵌套调用了。我们在mean()函
+数的输出中并未看到从51个州中随机抽取的16个州人口数值，而是看到了mean()函
+数直接用这16个数来为我们计算出来的均值。如果你的记忆力很好，或者往前面的
+章节翻一下，你会看到51个数值的均值是 6053834. 于是你会发现我们从这16个州
+的样本获得的均值真的是离总体的均值相差的有点远。我们是不是应该感到焦虑？
+当然不是！我们知道，当抽取样本时，无论是抽取糖果，还是抽取各个州，我们的
+样本均值永远都不会和总体均值正好一样。其实我们并非对某一次抽样的结果感兴
+趣，而是要专注于长期抽样的结果。于是，我们现在要让 R 来帮我们做重复抽样了，不是抽取1次、4次，而是400次甚至4000次。和其他的编程语言一样，R 有很多方法可以重复某个操作。其中最简单的一个方法非replicate()函数莫属。让我们先尝试一下重复4次：</p>
+
+<pre><code class="r">set.seed(31415)
+replicate(4, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), simplify = TRUE)
+</code></pre>
+
+<pre><code>## [1] 5617503 3945129 6510150 4407374
+</code></pre>
+
+<p>简单的不可思议吧！我们仍然使用了刚才用过的命令，即用来计算16个州的均值的
+mean()函数。只不过这一次，我们将mean()函数作为一个参数放到replicate()函数
+里面，于是我们才可以一次又一次的求均值。其中的 <code>simplify = TRUE</code> 参数是让 
+R 将函数运行的结果以一个均值构成的向量形式返回，而这正是我们想要的形式。
+由于我们只将mean()函数运行了4次，所以我们不会看到满屏的数字。从刚才的尝试
+来看，我们可以很轻易地将求均值的过程重复400次。你可以自己试一下，看看结果
+。至于在本书中，我们要将replicate()函数整个塞进另一个mean()函数，于是我们
+可以得到400个样本均值的平均数。我们来看一下：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(replicate(400, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), 
+    simplify = TRUE))
+</code></pre>
+
+<pre><code>## [1] 5983180
+</code></pre>
+
+<p>在上述命令中，最外层的mean()函数用粗体表示，以凸显其地位与之前命令的不同。将这个多层嵌套的命令的效果，用语言来描述一下就是：a)从51个州的总体中抽取400个样本容量为16的样本; b)对每一个样本计算其样本均值，并将均值保存到一个列表中; c)当计算完这400个均值后，计算包含有400个均值的列表的均值。从刚才的计算结果可以看到400个样本的均值是5983180. 虽然这个值和总体均值仍然不相等，但是已经接近了。我们距离总体均值的真值大概70000多，大概是1.16%(更精确的数值为70654/6053834 = 1.167%)。你可能也注意到了，即使你有一个速度较快的电脑，运行刚才的命令也得花一些时间。因为刚才的命令的确包含了很多操作！让我们更进一步，看看我们是否能更加接近总体均值：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(replicate(4000, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), 
+    simplify = TRUE))
+</code></pre>
+
+<pre><code>## [1] 6052941
+</code></pre>
+
+<p>现在我们更加接近真值了！我们得到的均值距离总体均值的真值只差不到千分之一！</p>
+
+</body>
+
+</html>
+
