@@ -23,6 +23,14 @@ Windows用户可以使用markdownpad软件打开本文件，Linux用户（你都
 2. [R studio](http://www.rstudio.com/)
 3. 在R Studio安装后，启动R Studio，新建 R markdown文件就可以开始你的翻译了。之后你点击Knitr HTML就可以看到对应的html输出
 
+### markdown 里面如何画表格
+
++ 方法1：直接写html
++ 方法2：http://www.tablesgenerator.com/ 这个网站帮你
++ 方法3：http://jianshu.io/p/sTeAbC
+
+
+
 ## 协作方式采用Github
 
 我们协作翻译采用Git继续版本管理，如果你不了解Git可以先看看下面的参考链接：
@@ -78,6 +86,10 @@ Note： 2014.7.2~2014.7.12 翻译前10章，请勿认领其它章节。
 2. 每周所有翻译人员最少开会一次，讨论翻译问题，协调问题。目前暂时定在周6或周日晚8点（待定）
 
 # 翻译注意事项
+
+## 文件提交
+
+如果你是要R markdown那么需要同时提交.rmd,md,以及html。如果你只用了markdown那么只需要提交.md
 
 ## 文件命名
 
