@@ -1,4 +1,4 @@
-# 任务列表
+﻿# 任务列表
 
 ## 2014.7.2~2014.7.12
 
@@ -9,7 +9,7 @@
 3. chp2 Identifying Data Problems 负责人 ：[飞]() []()  状态：进行中
 4. chp3 Getting Started with R 负责人 ：[乐果]() [vicky]()  状态：进行中
 5. chp4 Follow the Data 负责人 ：[K风]() [觉]()  状态：进行中
-6. chp5 Rows and Columns 负责人 ：[林思度]() []()  状态：进行中
+6. chp5 Rows and Columns 负责人 ：[林思度]() [never]()  状态：进行中
 7. chp6 Beer, Farms, and Peas 负责人 ：[燃芝]() []()  状态：进行中
 8. chp7 Sample in a Jar 负责人 ：[Ripe]() [Young]()  状态：进行中
 9. chp8 Big Data? Big Deal! 负责人 ：[tt]() []()  状态：进行中
