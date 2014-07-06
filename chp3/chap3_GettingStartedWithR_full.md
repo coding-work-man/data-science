@@ -1,5 +1,5 @@
 # 第三章 R入门
-<center>![Alt text](./img/Chap3_01.jpg)</center>
+<center>![Alt text](./img/chap3_01.jpg)</center>
 “R”是一个开源软件程序，由一群正在使用它的科学家，研究员和数据分析师们自愿服务来对它进行维护。“R”是免费下载和使用的，而且在线提供大量的建议和指导资源帮助用户学习R，这一点是非常好的，因为R是一个非常有力的和复杂的程序，现实中，它是一个专注于数据分析的功能全面的编程语言。
 
 
@@ -10,7 +10,7 @@
 
 让我们开始吧。显然你需要一台计算机。如果你在使用平板电脑或智能手机，你可能想跳转到R-studio的章节，因为旧版R还没有支持在平板电脑上工作（但是有一个适合平板电脑的工作区叫做R-studio）。有少数人开始使用基于Web界面的R，像这个 <a href="http://dssm.unipa.it/R-php/R-php-1/R/" title="http://dssm.unipa.it/R-php/R-php-1/R/">http://dssm.unipa.it/R-php/R-php-1/R/</a> -但是他们仍然在初始阶段。如果你的计算机装有Windows(r);, Mac-OSX(r);或者 Linux操作系统，你可以到这里下载R： <a href="http://cran.r-project.org/" title="http://cran.r-project.org/">http://cran.r-project.org/</a>。下载并安装到你的电脑。如果在安装这个新软件的过程中你需要帮助，这里推荐一个非常有用的小册子，是Thomas P. Hogan著的，叫做：Bare Bones R: A Brief Introductory Guide，你可以自行购买或者从图书馆借阅。还有很多在线的网站能够给你提供帮助，虽然大多数都不是直接面向初学者的。我在谷歌输入“help installing R”，它返回了一些比较好的网站。在Windows下，一个对安装R有比较丰富的内容的网站是：&quot;readthedocs.org&quot;，你可以点击以下网址进入：<a href="http://tinyurl.com/872ngtt" title=" http://tinyurl.com/872ngtt"> http://tinyurl.com/872ngtt</a>。
 
-<center>![Alt text](./img/Chap3_02.jpg)</center>
+<center>![Alt text](./img/chap3_02.jpg)</center>
 
 对于Mac用户，可以看一下Jeremy Taylor在Vimeo.com的视频介绍：<a href="http://vimeo.com/36697971" title="http://vimeo.com/36697971">http://vimeo.com/36697971</a>，这个视频既介绍了R在Mac上的初始化安装，也介绍了一些可选的步骤助于你的入门。Youtube上也提供了4个相关的视频教程，你课可以在搜索框输入“install R”试试。本章接下来的内容我们假设你已成功安装了R并且能像以上的截图一样运行在你的计算机上。（由于这个截图是在Mac上截下来的，所以如果你使用的是Windows或者Linux，那么截图看起来会有点不同的。）来玩一下吧，运行R你可以做的第一件事就是按一下颜色轮子来自定义R的面板颜色。以上截图中的R是使用了鲜艳的橙色作为背景色。截图上同时也展示了一些常用的命令，用于调出与R交互的一下比较基本的方法。注意到截图的底部的大于符号（“&gt;”），其实它是一个命令提示符&ndash;当R真正运行时，你在“&gt;”后面输入一些命令然后按回车建或返回键，这个命令就会被传递给R执行。当执行完成，返回的结果就会出现在“&gt;”之后，同时接着下一行另外一个命令提示符(“&gt;”)就会做好准备，接受你的下一个R命令。在截图当中，用户输入了1+1然后回车。世界各地的小学生都在利用1+1这条公式相互嘲笑各自的数学技巧，但R返回的结果并不是简单的2。如果你细心观察，你会发现在2之前还有一个括在中括号里的“1”，就是：[1]。这个[1]有什么作用呢？它是一个行标号，可以帮助追踪R显示的结果。仅仅显示一行结果是毫无意义的，但R就是喜欢做的更好，所以当我们深入学习R的时候，我们可以看到很多这样的行标号。
 
