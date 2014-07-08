@@ -46,15 +46,17 @@
 
 每章的最后都列出了相关的维基百科的资源以及可汗学院的课程，以及其学习他资源。这些资源使得读者可以深入学习每章的主题以及没有涉及的细节。
 
-当你阅读本书时，你可能需要在IPAD或者其他苹果的设备商访问某些阅读器软件，你可以通过如下网址获取本书，http://jsresearch.net/wiki/projects/teachdatascience/Teach_Data _Science.html. 阅读本书的同时，访问本书提供的各种interne链接是十分有用的。你也需要在你的电脑上实践本书涉及的一些R代码。
+当你阅读本书时，你可能需要在IPAD或者其他苹果的设备商访问某些阅读器软件，你可以通过如下网址获取本书，http://jsresearch.net/wiki/projects/teachdatascience/Teach_Data_Science.html. 阅读本书的同时，访问本书提供的各种interne链接是十分有用的。你也需要在你的电脑上实践本书涉及的一些R代码。
 
 最后一点，本书提供的阅读顺序可以并不假设读者具有任何的计算机或统计学知识或经验。如果你具有一定的知识和经验，你可以任意的跳过相关章节。以下为大家提供了免费得学习资源：
 
-http://en.wikipedia.org/wiki/E-Science 
-http://en.wikipedia.org/wiki/E-Science_librarianship
-http://en.wikipedia.org/wiki/Wikipedia:Size_comparisons
-http://en.wikipedia.org/wiki/Statistician http://en.wikipedia.org/wiki/Visualization_(computer_graphics)
-http://www.khanacademy.org/
-http://www.r-project.org/ 
-http://www.readwriteweb.com/hack/2011/09/unlocking-big-data-with-r.php http://rstudio.org/
+http://en.wikipedia.org/wiki/E-Science   
+http://en.wikipedia.org/wiki/E-Science_librarianship  
+http://en.wikipedia.org/wiki/Wikipedia:Size_comparisons  
+http://en.wikipedia.org/wiki/Statistician  
+http://en.wikipedia.org/wiki/Visualization_(computer_graphics)  
+http://www.khanacademy.org/  
+http://www.r-project.org/  
+http://www.readwriteweb.com/hack/2011/09/unlocking-big-data-with-r.php  
+http://rstudio.org/  
 
