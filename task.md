@@ -2,7 +2,7 @@
 
 ## 2014.7.2~2014.7.12
 
-2014.7.2~2014.7.12只能认领以下任务，待前面9章都完成后，统一进行后8章的工作
+以下各章开放Review中
 
 1. Section 1-data science: many skills 负责人 ：[机器人]() [口水猫]()  状态：进行中
 2. chp1 About Data 负责人 ：[k风]() []()  状态：进行中
@@ -21,7 +21,7 @@
 10. chp9 Onward with R-Studio 负责人 ：[]() []()  状态：待认领/进行中/完成
 11. chp10 Tweet,Tweet 负责人 ：[]() []()  状态：待认领/进行中/完成
 12. chp11 Popularity Contest 负责人 ：[]() []()  状态：待认领/进行中/完成
-13. chp12 String Theory 负责人 ：[]() []()  状态：待认领/进行中/完成
+13. chp12 String Theory 负责人 ：[燃芝]() []()  状态：待认领/进行中/完成
 14. chp13 Word Perfect 负责人 ：[vicky]() [乐果]()  状态：进行中
 15. chp14 Storage Wars 负责人 ：[]() []()  状态：待认领/进行中/完成
 16. chp15 Map MashUp 负责人 ：[]() []()  状态：待认领/进行中/完成
