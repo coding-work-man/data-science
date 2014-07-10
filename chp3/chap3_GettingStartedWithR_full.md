@@ -101,8 +101,8 @@ myRange <- range(myFamilyAges)
 - 
   - A R是免费的  √
   - B 在iTunes商店中售价99美分  
-	- C 10美元
-	- D 100美元
+  - C 10美元
+  - D 100美元
 
 
 
