@@ -20,8 +20,8 @@
 
 10. chp9 Onward with R-Studio 负责人 ：[]() []()  状态：待认领/进行中/完成
 11. chp10 Tweet,Tweet 负责人 ：[]() []()  状态：待认领/进行中/完成
-12. chp11 Popularity Contest 负责人 ：[]() []()  状态：待认领/进行中/完成
-13. chp12 String Theory 负责人 ：[燃芝]() []()  状态：待认领/进行中/完成
+12. chp11 Popularity Contest 负责人 ：[燃芝]() []()  状态：待认领/进行中/完成
+13. chp12 String Theory 负责人 ：[]() []()  状态：待认领/进行中/完成
 14. chp13 Word Perfect 负责人 ：[vicky]() [乐果]()  状态：进行中
 15. chp14 Storage Wars 负责人 ：[]() []()  状态：待认领/进行中/完成
 16. chp15 Map MashUp 负责人 ：[]() []()  状态：待认领/进行中/完成
