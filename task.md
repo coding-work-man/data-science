@@ -19,7 +19,7 @@
 目前开放认领，前面的翻译以及review工作都完成了可以开始下面的工作，同时把自己的名字加在任务后面
 
 10. chp9 Onward with R-Studio 负责人 ：[飞]() []()  状态： 进行中
-11. chp10 Tweet,Tweet 负责人 ：[]() []()  状态：待认领/进行中/完成
+11. chp10 Tweet,Tweet 负责人 ：[机器人]() [口水猫]()  状态：进行中
 12. chp11 Popularity Contest 负责人 ：[燃芝]() []()  状态：待认领/进行中/完成
 13. chp12 String Theory 负责人 ：[]() []()  状态：待认领/进行中/完成
 14. chp13 Word Perfect 负责人 ：[vicky]() [乐果]()  状态：进行中
