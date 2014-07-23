@@ -1,17 +1,192 @@
+---
+output: html_document
+---
 ![](./img/9-head.jpg)
 
-**ä½œä¸ºä¸€ä¸ªæ‹¥æœ‰æ´»è·ƒçš„ç”¨æˆ·ç¤¾åŒºçš„å¼€æºè½¯ä»¶ï¼ŒRä¹‹æ‰€ä»¥èƒ½ä¸æ–­åˆ›æ–°å‘å±•ç¦»ä¸å¼€ç¤¾åŒºå¿—æ„¿è€…æ— ç§è´¡çŒ®ã€‚å…¶ä¸­ä¸€ä¸ªéžå¸¸é‡è¦çš„åˆ›æ–°å°±èƒ½å®Œç¾Žæ”¯æŒRè¯­è¨€å‰¯æœ¬çš„R-Studioæ¡†æž¶ã€‚æœ¬ç« ä»ŽR-Studioçš„å®‰è£…å¼€å§‹ï¼Œç„¶åŽå†è¯¦ç»†ä»‹ç»äº†â€œåŒ…â€â€”â€”æ‰©å±•Rçš„å…³é”®ã€‚**
+**×÷ÎªÒ»¸öÓµÓÐ»îÔ¾µÄÓÃ»§ÉçÇøµÄ¿ªÔ´Èí¼þ£¬RÖ®ËùÒÔÄÜ²»¶Ï´´ÐÂ·¢Õ¹Àë²»¿ªÉçÇøÖ¾Ô¸ÕßÎÞË½¹±Ï×¡£ÆäÖÐÒ»¸ö·Ç³£ÖØÒªµÄ´´ÐÂ¾ÍÄÜÍêÃÀÖ§³ÖRÓïÑÔ¸±±¾µÄR-Studio¿ò¼Ü¡£±¾ÕÂ´ÓR-StudioµÄ°²×°¿ªÊ¼£¬È»ºóÔÙÏêÏ¸½éÉÜÁË¡°°ü¡±¡ª¡ªÀ©Õ¹RµÄ¹Ø¼ü¡£**
 
-Joseph J. Allaire ä½œä¸ºä¸€ä¸ªè¿žç»­åˆ›ä¸šå®¶å’Œè½¯ä»¶å·¥ç¨‹å¸ˆï¼Œå¼€å‘äº†ä¸€ç³»åˆ—è‘—åè½¯ä»¶ï¼ŒåŒ…æ‹¬ColdFusionå’Œå¾®è½¯åšå®¢å·¥å…·Windows Live Writerï¼Œå…¶ä¸­ColdFusionåŽæ¥è¢«å–ç»™äº†ç½‘ç»œåª’ä½“å·¥å…·å·¨å¤´Macromediaã€‚ä»Ž2009å¹´å¼€å§‹ï¼ŒAllaireå’Œä¸€ä¸ªå°å›¢é˜Ÿå¼€å§‹å¼€å‘ä¸€æ¬¾å¼€æºè½¯ä»¶ï¼Œç”¨æ¥æé«˜Rçš„å¯ç”¨æ€§å’Œæ•ˆçŽ‡ã€‚
+Joseph J. Allaire ×÷ÎªÒ»¸öÁ¬Ðø´´Òµ¼ÒºÍÈí¼þ¹¤³ÌÊ¦£¬¿ª·¢ÁËÒ»ÏµÁÐÖøÃûÈí¼þ£¬°üÀ¨ColdFusionºÍÎ¢Èí²©¿Í¹¤¾ßWindows Live Writer£¬ÆäÖÐColdFusionºóÀ´±»Âô¸øÁËÍøÂçÃ½Ìå¹¤¾ß¾ÞÍ·Macromedia¡£´Ó2009Äê¿ªÊ¼£¬AllaireºÍÒ»¸öÐ¡ÍÅ¶Ó¿ªÊ¼¿ª·¢Ò»¿î¿ªÔ´Èí¼þ£¬ÓÃÀ´Ìá¸ßRµÄ¿ÉÓÃÐÔºÍÐ§ÂÊ¡£
 
-å¦‚åŒå‰é¢ç« èŠ‚æ‰€è¿°ï¼Œä½œä¸ºä¸€é—¨å¼€æºè¯­è¨€ï¼ŒRå¯ä»¥åˆ›å»ºMacï¼ŒWindowsï¼Œæˆ–è€…Linuxå¹³å°ä¸‹çš„å‰¯æœ¬ï¼Œå¹¶ä¸”å…è®¸æ‰€æœ‰äººæ£€æŸ¥å’Œä¿®æ”¹ã€‚åŒå…¶å®ƒå¼€æºé¡¹ç›®ä¸€æ ·ï¼Œç¤¾åŒºé‡Œæœ‰å¤§é‡æ´»è·ƒçš„å¿—æ„¿è€…è‡´åŠ›äºŽRè¯­è¨€çš„æ”¹å–„ï¼ŒåŒ…æ‹¬è¯­è¨€æœ¬èº«ï¼Œä»¥åŠä¸ºRæ·»åŠ æ–°çš„å†…å®¹ã€‚å…¶ä¸­ä¸€ä¸ªæ–°æ·»åŠ çš„å†…å®¹å°±æ˜¯R-Studioã€‚R-Studioæ˜¯ä¸€ç§é›†æˆå¼€å‘çŽ¯å¢ƒï¼ˆIDEï¼ŒIntegrated Development Environmentï¼‰ã€‚æ¯ä¸€ä¸ªè½¯ä»¶å·¥ç¨‹å¸ˆéƒ½çŸ¥é“IDEåœ¨è½¯ä»¶å¼€å‘è¿‡ç¨‹ä¸­çš„é‡è¦æ€§ã€‚ä½ å¯ä»¥æŠŠRæƒ³è±¡æˆåœ°æ¿ä¸Šå·èµ·çš„ä¸€å—å¸†å¸ƒï¼Œè€ŒR-Studioåˆ™åƒä¸€ä¸ªä¼˜ç¾Žçš„ç›¸æ¡†ã€‚å½“ä½ æŠŠRæ”¾åœ¨R-Studioä¸­åŽï¼Œå°±åƒä»»ä½•å¥½çš„ç›¸æ¡†ä¸€æ ·ï¼ŒR-Studioèƒ½è®©Ræ˜¾å¾—æ›´åŠ ä¼˜ç¾Žï¼Œå…·æœ‰é‰´èµæ€§ã€‚
+ÈçÍ¬Ç°ÃæÕÂ½ÚËùÊö£¬×÷ÎªÒ»ÃÅ¿ªÔ´ÓïÑÔ£¬R¿ÉÒÔ´´½¨Mac£¬Windows£¬»òÕßLinuxÆ½Ì¨ÏÂµÄ¸±±¾£¬²¢ÇÒÔÊÐíËùÓÐÈË¼ì²éºÍÐÞ¸Ä¡£Í¬ÆäËü¿ªÔ´ÏîÄ¿Ò»Ñù£¬ÉçÇøÀïÓÐ´óÁ¿»îÔ¾µÄÖ¾Ô¸ÕßÖÂÁ¦ÓÚRÓïÑÔµÄ¸ÄÉÆ£¬°üÀ¨ÓïÑÔ±¾Éí£¬ÒÔ¼°ÎªRÌí¼ÓÐÂµÄÄÚÈÝ¡£ÆäÖÐÒ»¸öÐÂÌí¼ÓµÄÄÚÈÝ¾ÍÊÇR-Studio¡£R-StudioÊÇÒ»ÖÖ¼¯³É¿ª·¢»·¾³£¨IDE£¬Integrated Development Environment£©¡£Ã¿Ò»¸öÈí¼þ¹¤³ÌÊ¦¶¼ÖªµÀIDEÔÚÈí¼þ¿ª·¢¹ý³ÌÖÐµÄÖØÒªÐÔ¡£Äã¿ÉÒÔ°ÑRÏëÏó³ÉµØ°åÉÏ¾íÆðµÄÒ»¿é·«²¼£¬¶øR-StudioÔòÏñÒ»¸öÓÅÃÀµÄÏà¿ò¡£µ±Äã°ÑR·ÅÔÚR-StudioÖÐºó£¬¾ÍÏñÈÎºÎºÃµÄÏà¿òÒ»Ñù£¬R-StudioÄÜÈÃRÏÔµÃ¸ü¼ÓÓÅÃÀ£¬¾ßÓÐ¼øÉÍÐÔ¡£
 
-ä½ å¯ä»¥åœ¨ä»»ä½•æ—¶å€™ç™»é™†R-Studioçš„[å®˜ç½‘](http://www.rstudio.org)æ¥æŸ¥çœ‹æœ‰å…³ä¿¡æ¯ã€‚åœ¨æœ¬ç« å‰©ä¸‹çš„éƒ¨åˆ†ä¸­ï¼Œä½ éœ€è¦ä¸€å°è£…æœ‰Macã€æˆ–Windowsã€æˆ–Linuxç³»ç»Ÿçš„ç”µè„‘æ¥è·Ÿç€å­¦ä¹ R-Studioçš„å®‰è£…å’Œä½¿ç”¨ã€‚
+Äã¿ÉÒÔÔÚÈÎºÎÊ±ºòµÇÂ½R-Studio¹ÙÍø <http://www.rstudio.org> À´²é¿´ÓÐ¹ØÐÅÏ¢¡£ÔÚ±¾ÕÂÊ£ÏÂµÄ²¿·ÖÖÐ£¬ÄãÐèÒªÒ»Ì¨×°ÓÐMac¡¢»òWindows¡¢»òLinuxÏµÍ³µÄµçÄÔÀ´¸ú×ÅÑ§Ï°R-StudioµÄ°²×°ºÍÊ¹ÓÃ¡£
 
-åœ¨å¼€å§‹å­¦ä¹ R-Studioä¹‹å‰ï¼Œæˆ‘ä»¬å…ˆæ¥äº†è§£ä¸ºä»€ä¹ˆæˆ‘ä»¬åœ¨ä½¿ç”¨Rçš„æ—¶å€™éœ€è¦ä¸€ä¸ªIDEã€‚åœ¨å‰é¢çš„ç« èŠ‚ä¸­ï¼Œæˆ‘ä»¬éƒ½æ˜¯é€šè¿‡æ€»æ‰€å‘¨çŸ¥çš„â€œRæŽ§åˆ¶å°â€æ¥è¾“å…¥å„ç§å„æ ·çš„Rå‘½ä»¤ã€‚æŽ§åˆ¶å°æ˜¯ä¸€ä¸ªéžå¸¸å¤è€çš„æŠ€æœ¯æœ¯è¯­ï¼Œå¯ä»¥è¿½æº¯åˆ°ç”µè„‘å¤§å¾—è¿˜éœ€è¦å•ç‹¬çš„ç©ºè°ƒå®¤çš„æ—¶ä»£ã€‚å½“æ—¶æŽ§åˆ¶å°ä½œä¸ºâ€œä¸»æŽ§å°â€ï¼ŒæŽ¥å—å„ç§æ“ä½œå‘½ä»¤ï¼Œå®Œæˆå¯¹æ•´ä¸ªå·¨å¤§çš„è®¡ç®—æœºçš„æŽ§åˆ¶ã€‚å¦‚ä»Šï¼ŒæŽ§åˆ¶å°è¿™ä¸ªæœ¯è¯­åœ¨å¾ˆå¤šåœºåˆéƒ½æ˜¯æŒ‡å¯ä»¥ç›´æŽ¥è¾“å…¥å‘½ä»¤çš„ç•Œé¢ã€‚æˆ‘ä»¬ä¹‹å‰å­¦ä¹ Rè¯­è¨€ä»¥åŠä¸€äº›æ•°æ®ç»“æž„å’Œç»Ÿè®¡å­¦åŸºæœ¬åŽŸç†çš„æ—¶å€™ï¼Œå°±æ˜¯é€šè¿‡åœ¨RæŽ§åˆ¶å°ä¸­è¾“å…¥å‘½ä»¤æ¥å®Œæˆçš„ã€‚
+ÔÚ¿ªÊ¼Ñ§Ï°R-StudioÖ®Ç°£¬ÎÒÃÇÏÈÀ´ÁË½âÎªÊ²Ã´ÎÒÃÇÔÚÊ¹ÓÃRµÄÊ±ºòÐèÒªÒ»¸öIDE¡£ÔÚÇ°ÃæµÄÕÂ½ÚÖÐ£¬ÎÒÃÇ¶¼ÊÇÍ¨¹ý×ÜËùÖÜÖªµÄ¡°R¿ØÖÆÌ¨¡±À´ÊäÈë¸÷ÖÖ¸÷ÑùµÄRÃüÁî¡£¿ØÖÆÌ¨ÊÇÒ»¸ö·Ç³£¹ÅÀÏµÄ¼¼ÊõÊõÓï£¬¿ÉÒÔ×·ËÝµ½µçÄÔ´óµÃ»¹ÐèÒªµ¥¶ÀµÄ¿Õµ÷ÊÒµÄÊ±´ú¡£µ±Ê±¿ØÖÆÌ¨×÷Îª¡°Ö÷¿ØÌ¨¡±£¬½ÓÊÜ¸÷ÖÖ²Ù×÷ÃüÁî£¬Íê³É¶ÔÕû¸ö¾Þ´óµÄ¼ÆËã»úµÄ¿ØÖÆ¡£Èç½ñ£¬¿ØÖÆÌ¨Õâ¸öÊõÓïÔÚºÜ¶à³¡ºÏ¶¼ÊÇÖ¸¿ÉÒÔÖ±½ÓÊäÈëÃüÁîµÄ½çÃæ¡£ÎÒÃÇÖ®Ç°Ñ§Ï°RÓïÑÔÒÔ¼°Ò»Ð©Êý¾Ý½á¹¹ºÍÍ³¼ÆÑ§»ù±¾Ô­ÀíµÄÊ±ºò£¬¾ÍÊÇÍ¨¹ýÔÚR¿ØÖÆÌ¨ÖÐÊäÈëÃüÁîÀ´Íê³ÉµÄ¡£
 
-è€Œè¦æƒ³çœŸæ­£æžæ•°æ®ç§‘å­¦ï¼Œæˆ‘ä»¬ä¹Ÿä¸å¯èƒ½æ•´å¤©ååœ¨ç”µè„‘é¢å‰æ•²å‘½ä»¤ã€‚é¦–å…ˆï¼Œè¿™æ ·å¾ˆå¿«å°±ä¼šå˜å¾—éžå¸¸æž¯ç‡¥ä¹å‘³ã€‚å…¶æ¬¡ï¼Œå¦‚æžœè€æ¿å‘çŽ°æˆ‘ä»¬åœ¨é‡å¤è¾“å…¥æ˜¨å¤©è¾“è¿‡çš„å‘½ä»¤ï¼Œä»–å°±ä¼šå¼€å§‹æ€€ç–‘æˆ‘ä»¬çš„å·¥ä½œã€‚æœ€åŽï¼Œä¹Ÿæ˜¯éžå¸¸é‡è¦çš„ä¸€ç‚¹ï¼Œå¦‚æžœå®žçŽ°æ‰€æœ‰çš„å°ä»»åŠ¡å¿…é¡»é€šè¿‡æ‰‹åŠ¨è¾“å…¥ä¸€äº›å‘½ä»¤æ¥å®Œæˆçš„è¯ï¼Œè¿™ä¼šéžå¸¸å®¹æ˜“å‡ºé”™ï¼Œäº§ç”Ÿè®¡ç®—æœºç§‘å­¦å®¶æ‰€è°“çš„â€œbugâ€ã€‚è€ƒè™‘åˆ°è¿™äº›åŽŸå› ï¼Œæˆ‘ä»¬è¿™æœ¬ä¹¦çš„ä¸€ä¸ªç›®æ ‡å°±æ˜¯è¦åˆ›é€ ä¸€äº›å¯ä»¥é‡å¤ä½¿ç”¨çš„ä¸œè¥¿ï¼Œè¿™æ ·æˆ‘ä»¬å°±å¯ä»¥ç®€å•ç‚¹å‡ ä¸‹é¼ æ ‡æˆ–æ˜¯è¾“å…¥ä¸€äº›ç®€å•çš„ä¸œè¥¿å°±å¯ä»¥å®Œæˆéœ€è¦å¾ˆå¤šå¤„ç†æ­¥éª¤çš„ä»»åŠ¡ã€‚ä½¿ç”¨IDEï¼Œæˆ‘ä»¬å°±å¯ä»¥è½»æ¾å»ºç«‹è¿™æ ·çš„å¯ä»¥é‡å¤ä½¿ç”¨çš„éƒ¨åˆ†ã€‚IDEæ•´åˆäº†å„ä¸ªåŠŸèƒ½ï¼Œç”¨çš„æ—¶å€™æ‰“å¼€å¯¹åº”éƒ¨åˆ†ï¼Œä¸ç”¨çš„æ—¶å€™å°†å…¶éšè—æˆ–è€…å…³é—­å³å¯ã€‚ç”±äºŽæˆ‘ä»¬å’Œæ•°æ®æ‰“äº¤é“ï¼Œæˆ‘ä»¬éœ€è¦éžå¸¸ç»†è‡´çš„æ£€æµ‹è¿™äº›æ•°æ®ï¼ŒåŒ…æ‹¬æ•°æ®å†…å®¹åŠå…¶ç»“æž„ã€‚ä½ å¯èƒ½ä¹Ÿå·²ç»æ³¨æ„åˆ°äº†ï¼Œé€šè¿‡RæŽ§åˆ¶å°æ¥å®Œæˆè¿™äº›å†…å®¹éžå¸¸æ— èŠçš„ï¼Œå…¶è¾“å‡ºçš„ä¸€å¤§æ®µçš„æ–‡å­—å¹¶ä¸”æœ‰çš„æ–‡å­—åœ¨ä½ çœ‹æ¸…ä¹‹å‰å°±è¢«æŒ¤å‡ºäº†å±å¹•ã€‚ä½œä¸ºRè¯­è¨€çš„IDEï¼ŒR-Studioå°±å…è®¸æˆ‘ä»¬æŽ§åˆ¶å’Œç›‘è§†ä»£ç å’Œæ–‡å­—ï¼Œè¿™æ ·åœ¨æŸç§ç¨‹åº¦ä¸Šå¯ä»¥æ”¯æŒæˆ‘ä»¬åˆ›é€ å¯é‡å¤ä½¿ç”¨çš„å†…å®¹ã€‚
+¶øÒªÏëÕæÕý¸ãÊý¾Ý¿ÆÑ§£¬ÎÒÃÇÒ²²»¿ÉÄÜÕûÌì×øÔÚµçÄÔÃæÇ°ÇÃÃüÁî¡£Ê×ÏÈ£¬ÕâÑùºÜ¿ì¾Í»á±äµÃ·Ç³£¿ÝÔï·¦Î¶¡£Æä´Î£¬Èç¹ûÀÏ°å·¢ÏÖÎÒÃÇÔÚÖØ¸´ÊäÈë×òÌìÊä¹ýµÄÃüÁî£¬Ëû¾Í»á¿ªÊ¼»³ÒÉÎÒÃÇµÄ¹¤×÷¡£×îºó£¬Ò²ÊÇ·Ç³£ÖØÒªµÄÒ»µã£¬Èç¹ûÊµÏÖËùÓÐµÄÐ¡ÈÎÎñ±ØÐëÍ¨¹ýÊÖ¶¯ÊäÈëÒ»Ð©ÃüÁîÀ´Íê³ÉµÄ»°£¬Õâ»á·Ç³£ÈÝÒ×³ö´í£¬²úÉú¼ÆËã»ú¿ÆÑ§¼ÒËùÎ½µÄ¡°bug¡±¡£¿¼ÂÇµ½ÕâÐ©Ô­Òò£¬ÎÒÃÇÕâ±¾ÊéµÄÒ»¸öÄ¿±ê¾ÍÊÇÒª´´ÔìÒ»Ð©¿ÉÒÔÖØ¸´Ê¹ÓÃµÄ¶«Î÷£¬ÕâÑùÎÒÃÇ¾Í¿ÉÒÔ¼òµ¥µã¼¸ÏÂÊó±ê»òÊÇÊäÈëÒ»Ð©¼òµ¥µÄ¶«Î÷¾Í¿ÉÒÔÍê³ÉÐèÒªºÜ¶à´¦Àí²½ÖèµÄÈÎÎñ¡£Ê¹ÓÃIDE£¬ÎÒÃÇ¾Í¿ÉÒÔÇáËÉ½¨Á¢ÕâÑùµÄ¿ÉÒÔÖØ¸´Ê¹ÓÃµÄ²¿·Ö¡£IDEÕûºÏÁË¸÷¸ö¹¦ÄÜ£¬ÓÃµÄÊ±ºò´ò¿ª¶ÔÓ¦²¿·Ö£¬²»ÓÃµÄÊ±ºò½«ÆäÒþ²Ø»òÕß¹Ø±Õ¼´¿É¡£ÓÉÓÚÎÒÃÇºÍÊý¾Ý´ò½»µÀ£¬ÎÒÃÇÐèÒª·Ç³£Ï¸ÖÂµÄ¼ì²âÕâÐ©Êý¾Ý£¬°üÀ¨Êý¾ÝÄÚÈÝ¼°Æä½á¹¹¡£Äã¿ÉÄÜÒ²ÒÑ¾­×¢Òâµ½ÁË£¬Í¨¹ýR¿ØÖÆÌ¨À´Íê³ÉÕâÐ©ÄÚÈÝ·Ç³£ÎÞÁÄµÄ£¬ÆäÊä³öµÄÒ»´ó¶ÎµÄÎÄ×Ö²¢ÇÒÓÐµÄÎÄ×ÖÔÚÄã¿´ÇåÖ®Ç°¾Í±»¼·³öÁËÆÁÄ»¡£×÷ÎªRÓïÑÔµÄIDE£¬R-Studio¾ÍÔÊÐíÎÒÃÇ¿ØÖÆºÍ¼àÊÓ´úÂëºÍÎÄ×Ö£¬ÕâÑùÔÚÄ³ÖÖ³Ì¶ÈÉÏ¿ÉÒÔÖ§³ÖÎÒÃÇ´´Ôì¿ÉÖØ¸´Ê¹ÓÃµÄÄÚÈÝ¡£
 
-åœ¨åšè¿™äº›ä¹‹å‰ï¼Œé¦–å…ˆå¿…é¡»åœ¨ç”µè„‘ä¸Šå®‰è£…R-Studioã€‚å®‰è£…R-Studioä¹‹å‰ï¼Œå¿…é¡»å…ˆå®‰è£…Rã€‚å¦‚æžœä½ å·²ç»åœ¨ç¬¬äºŒç« ä¸­å®Œæˆäº†Rçš„å®‰è£…ï¼Œå‰©ä¸‹çš„R-Studioçš„å®‰è£…å°±æ˜¯å°èœä¸€ç¢Ÿã€‚åœ¨å®‰è£…R-Studioä¹‹å‰ï¼Œä½ å¿…é¡»ç¡®ä¿å®‰è£…çš„Ræ˜¯æœ€æ–°çš„ç‰ˆæœ¬ã€‚[R-Studioå®˜ç½‘](http://www.rstudio.org/)ä¸Šæœ‰ä¸°å¯Œçš„æ–‡æ¡£ï¼Œåªè¦è·Ÿç€è¿™äº›æ–‡æ¡£çš„è¯´æ˜Žæ¥å®‰è£…ï¼Œé—®é¢˜åº”è¯¥ä¸å¤§ã€‚å¦‚æžœå®‰è£…è¿‡ç¨‹ä¸­è¦æ±‚ä½ é€‰æ‹©å®‰è£…â€œR-StudioæœåŠ¡å™¨ç‰ˆâ€è¿˜æ˜¯â€œæ¡Œé¢åº”ç”¨ç‰ˆâ€ï¼Œé€‰æ‹©åŽè€…å³å¯ã€‚ç¨åŽæˆ‘ä»¬ä¼šå¯¹R-StudioæœåŠ¡å™¨ç‰ˆæœ¬è¿›è¡Œä»‹ç»ï¼Œä½†æ˜¯çŽ°åœ¨é€‰æ‹©æ¡Œé¢ç‰ˆæœ¬å³å¯ã€‚å¦‚æžœä½ è¿˜æƒ³äº†è§£é¢å¤–çš„å…³äºŽR-Studioçš„ä¿¡æ¯ï¼Œå¯ä»¥å‚è€ƒJohn Verzaniï¼ˆ2011ï¼ŒSebastopolï¼ŒCAï¼šO'Reilly Media)å†™çš„ä¹¦ï¼š*Getting Started with R-studioã€‚*è¯¥ä¹¦ç¬¬ä¸€ç« å°±å¯¹Rå’ŒR-Studioè¿›è¡Œäº†å¤§ä½“ä»‹ç»ï¼Œä¹Ÿä»‹ç»äº†å¦‚ä½•å®‰è£…å’Œæ›´æ–°R-studioã€‚YouTubeçš„ä¸€æ®µ[è§†é¢‘](http://www.youtube.com/watch?v=7sAmqkZ3Be8)ä¹Ÿå¯¹R-Studioè¿›è¡Œäº†è¯¦ç»†ä»‹ç»ã€‚éœ€è¦æ³¨æ„çš„æ˜¯ï¼ŒYouTubeä¸Šæœ‰ä¸€ä¸ªç£ç›˜æ¢å¤ç¨‹åºå’Œä¸€ä¸ªéŸ³ä¹ç»„ç»‡ä¹Ÿéƒ½å«R-Studioï¼Œå› æ­¤å¦‚æžœä½ ä»…ä»…ç”¨â€œR-Studioâ€æœç´¢è€Œä¸åŠ å…¶ä»–å…³é”®è¯çš„è¯ï¼Œä½ å°†ä¼šæœåˆ°å¤§é‡å’Œè¿™ä¸¤è€…æœ‰å…³çš„è§†é¢‘ã€‚
+ÔÚ×öÕâÐ©Ö®Ç°£¬Ê×ÏÈ±ØÐëÔÚµçÄÔÉÏ°²×°R-Studio¡£°²×°R-StudioÖ®Ç°£¬±ØÐëÏÈ°²×°R¡£Èç¹ûÄãÒÑ¾­ÔÚµÚ¶þÕÂÖÐÍê³ÉÁËRµÄ°²×°£¬Ê£ÏÂµÄR-StudioµÄ°²×°¾ÍÊÇÐ¡²ËÒ»µú¡£ÔÚ°²×°R-StudioÖ®Ç°£¬Äã±ØÐëÈ·±£°²×°µÄRÊÇ×îÐÂµÄ°æ±¾¡£R-Studio¹ÙÍø <http://www.rstudio.org/> ÉÏÓÐ·á¸»µÄÎÄµµ£¬Ö»Òª¸ú×ÅÕâÐ©ÎÄµµµÄËµÃ÷À´°²×°£¬ÎÊÌâÓ¦¸Ã²»´ó¡£Èç¹û°²×°¹ý³ÌÖÐÒªÇóÄãÑ¡Ôñ°²×°¡°R-Studio·þÎñÆ÷°æ¡±»¹ÊÇ¡°×ÀÃæÓ¦ÓÃ°æ¡±£¬Ñ¡ÔñºóÕß¼´¿É¡£ÉÔºóÎÒÃÇ»á¶ÔR-Studio·þÎñÆ÷°æ±¾½øÐÐ½éÉÜ£¬µ«ÊÇÏÖÔÚÑ¡Ôñ×ÀÃæ°æ±¾¼´¿É¡£Èç¹ûÄã»¹ÏëÁË½â¶îÍâµÄ¹ØÓÚR-StudioµÄÐÅÏ¢£¬¿ÉÒÔ²Î¿¼John Verzani£¨2011£¬Sebastopol£¬CA£ºO'Reilly Media)Ð´µÄÊé£º*Getting Started with R-studio¡£*¸ÃÊéµÚÒ»ÕÂ¾Í¶ÔRºÍR-Studio½øÐÐÁË´óÌå½éÉÜ£¬Ò²½éÉÜÁËÈçºÎ°²×°ºÍ¸üÐÂR-studio¡£YouTubeµÄÒ»¶ÎÊÓÆµ <http://www.youtube.com/watch?v=7sAmqkZ3Be8> Ò²¶ÔR-Studio½øÐÐÁËÏêÏ¸½éÉÜ¡£ÐèÒª×¢ÒâµÄÊÇ£¬YouTubeÉÏÓÐÒ»¸ö´ÅÅÌ»Ö¸´³ÌÐòºÍÒ»¸öÒôÀÖ×éÖ¯Ò²¶¼½ÐR-Studio£¬Òò´ËÈç¹ûÄã½ö½öÓÃ¡°R-Studio¡±ËÑË÷¶ø²»¼ÓÆäËû¹Ø¼ü´ÊµÄ»°£¬Äã½«»áËÑµ½´óÁ¿ºÍÕâÁ½ÕßÓÐ¹ØµÄÊÓÆµ¡£
 
-å®‰è£…å¥½R-StudioåŽï¼Œä½ å°±å¯ä»¥ç›´æŽ¥è¿è¡Œå®ƒæ¥è¿›è¡Œæœ¬ç« åŽé¢çš„å†…å®¹ã€‚
+°²×°ºÃR-Studioºó£¬Äã¾Í¿ÉÒÔÖ±½ÓÔËÐÐËüÀ´½øÐÐ±¾ÕÂºóÃæµÄÄÚÈÝ¡£±¾Êé²»»áÏñÆäËûÑ§Ï°²ÄÁÏÒ»Ñù°ÑR-Studio½çÃæÉÏµÄÃ¿¸ö²¿·Ö¶¼½éÉÜÒ»±é£¬¶øÊÇÔÚÊ¹ÓÃµ½Ò»¸öÌØÐÔµÄÊ±ºò¾Í½«ÆäÍ»³öÏÔÊ¾³öÀ´¡£µ±ÄãÔËÐÐR-StudioÊ±£¬Äã½«»á¿´µ½Èýµ½ËÄ¸ö×Ó´°¿Ú¡£µã»÷¡°File¡±²Ëµ¥ÏÂµÄ¡°New¡±Ïî£¬²¢ÔÚ¡°New¡±µÄ×Ó²Ëµ¥ÖÐÑ¡Ôñ¡°R Script¡±£¬ÕâÑùÄã¾ÍÄÜ¿´µ½ÀàËÆÈçÏÂµÄ½çÃæ£º
+
+![](./img/9-1.jpg)
+
+
+```r
+MyMode <- function(myVector)
+{
+  return(myVector)
+}
+```
+
+¹§Ï²Äã¸Õ¸ÕÓÃRÐ´ÁËµÚÒ»¸öº¯Êý¡£Ò»¸öº¯ÊýÊÇÒ»×é¿ÉÒÔÖØ¸´Ê¹ÓÃµÄR´úÂë£¬Ã¿´ÎÊ¹ÓÃÊ±¾Í²»±ØÖØÐÂÊäÈëÏàÍ¬µÄ´úÂë£¬ÆäËü±à³ÌÓïÑÔÀïÒ²¶¼ÓÐº¯ÊýÕâ¸ö¸ÅÄî¡£º¯ÊýÒ²ÓÐ¡°¹ý³Ì¡±ºÍ¡°×Ó³ÌÐò¡±µÄÒâË¼£¬ÕâÔÚ²»Í¬±à³ÌÓïÑÔÀïÓÐÇáÎ¢µÄ²»Í¬¡£ÎÒÃÇ¸ø¸Õ¶¨ÒåµÄº¯ÊýÃüÃûÎª¡°MyMode¡±¡£´ÓÇ°Ãæ¶à¸öÕÂ½Ú¿ÉÒÔ¿´³ö£¬³ýÁË»ù±¾µÄº¯Êýmean()ºÍmedian£¨£©£¬RµÄ»ù±¾°²×°ÀïÃæ²¢Ã»ÓÐÍ³¼ÆÑ§Ä£¿éµÄº¯Êý¡£ÕâÐèÒªÎÒÃÇ×Ô¼º´´½¨Í³¼ÆÄ£¿éº¯ÊýÀ´½â¾öÕâ¸öÎÊÌâ¡£»ØÏëÄÇ¸öÍ³¼ÆÒ»¸öÁÐ±íÀïÃ¿¸öÖµ³öÏÖµÄ´ÎÊý²¢·µ»Ø³öÏÖ´ÎÊý×î¶àµÄÖµµÄº¯Êý£¬ÄÇ¾ÍÊÇÒ»¸öÍ³¼ÆÄ£¿éµÄ¶¨Òå£ºÁÐ±íÖÐ³öÏÖÆµÂÊ×î¸ßµÄÏî¡£
+
+¹ØÓÚº¯Êý£¬ÓÐ¼¸µãÐèÒª×¢Òâ¡£Ê×ÏÈ¡¢µÚÒ»ÐÐÖÐÔ²À¨ºÅÀ¨ÆðÀ´µÄ£¨myVector£©±íÊ¾º¯ÊýµÄ¡°²ÎÊý¡±£¬»òÕßËµÊäÈë¡£Ö®Ç°µ±ÎÒÃÇµ÷ÓÃÀàËÆmean£¨£©ºÍmedian£¨£©µÈº¯ÊýÊ±¾ÍÓöµ½¹ý¡°²ÎÊý¡±Õâ¸ö¸ÅÄî¡£Æä´Î¡¢×¢ÒâµÚ¶þÐÐºÍ×îºóÒ»ÐÐµÄ´óÀ¨ºÅ£¬ÔÚº¯ÊýÖÐ£¬ÕâÐ©´óÀ¨ºÅ¶¼ÊÇ³É¶Ô³öÏÖµÄ¡£×îºó¡¢×¢Òâº¯Êý½Ó½üÄ©Î²µÄreturn£¨£©Óï¾ä£¬ÕâÊÇ½«º¯ÊýÍê³É½á¹û·µ»ØµÄµØ·½¡£Ò»»áµ±ÎÒÃÇÔÚR¿ØÖÆÌ¨ÖÐµ÷ÓÃÕâ¸öº¯ÊýÊ±¾ÍÄÜ¿´µ½£¬·µ»Ø½á¹û¾ÍÊÇreturn£¨£©Óï¾äÖÐÀ¨ºÅÀïµÄ¶«Î÷¡£
+
+»ùÓÚÕâÐ©ËµÃ÷£¬ÄãÏÖÔÚÖªµÀÇ°ÃæµÄÕâ¸öMyMode£¨£©º¯Êý×öÁËÊ²Ã´ÁËÂð£¿Õâ¸öº¯ÊýÆäÊµ¶ÔÎÒÃÇ´«ÈëµÄ²ÎÊýmyVectorÎ´×öÈÎºÎ¸Ä¶¯¡£Ë³±ãËµÒ»ÏÂ£¬Ð´´úÂëÊ±Ò»ÖÖ³£ÓÃµÄ·½Ê½¾ÍÊÇÕâÃ´Ò»µãÒ»µãµÄÊµÏÖ´úÂë¡£ÕâÑùÎÒÃÇ¿ÉÒÔ²âÊÔÃ¿Ò»²½¶¼ÄÜµÃµ½Ê²Ã´ÑùµÄ½á¹û¡£ÎÒÃÇÏÖÔÚ¾Í¿ÉÒÔ²âÊÔÒ»ÏÂÄ¿Ç°µÄº¯ÊýÄÜ¸ÉÊ²Ã´¡£Ê×ÏÈ£¬ÎÒÃÇ´´½¨Ò»¸öÐ¡µÄÏòÁ¿¡£ÔÚR-studioµÄ×óÏÂ½Ç¿ÉÒÔ¿´µ½Ò»¸ö³£¹æµÄR¿ØÖÆÌ¨ÕýÔÚÔËÐÐ¡£ÏñÇ°Ãæ¼¸ÕÂÒ»Ñù£¬ÔÚÀïÃæÊäÈëRÃüÁî£º
+
+```r
+tinyData <- c(1,2,1,2,3,3,3,4,5,4,5)
+tinyData
+```
+
+```
+##  [1] 1 2 1 2 3 3 3 4 5 4 5
+```
+È»ºóÎÒÃÇ¾Í¿ÉÒÔÊÔÊÔÎÒÃÇÐ´µÄMyMode£¨£©º¯Êý£º
+
+\> MyMode(tinyData)
+
+   Error: could not find function "MyMode"
+
+Å¶£¬³ö´íÁË£¡R»¹²»ÖªµÀÎÒÃÇµÄÐÂº¯ÊýÄØ¡£ÎÒÃÇËäÈ»ÔÚ´úÂë´°¿ÚÊäÈëÁËMyMode£¨£©º¯Êý£¬µ«ÊÇ»¹Ã»ÓÐ¸æËßRÄØ¡£²é¿´×óÉÏ½ÇµÄ´°¿Ú£¬Äã¿ÉÒÔ¿´µ½MyMode£¨£©º¯ÊýµÄ´úÂë£¬ÒÔ¼°ÔÚ´úÂëÉÏ·½µÄ¹¤¾ßÀ¸ÖÐÓÐÒ»Ð©Ð¡µÄ°´Å¥£¬ÆäÖÐÓÐÒ»¸öÅÔ±ßÐ´×Å¡°Run¡±µÄÏòÓÒµÄ¼ýÍ·¡£Ñ¡ÖÐMyMode()º¯ÊýµÄËùÓÐ´úÂë£¨´Ó×ÖÃæ¡°M¡±µ½×îºóµÄ´óÀ¨ºÅ£©£¬È»ºóµã»÷Run°´Å¥£¬Äã¾Í»áÁ¢¼´¿´µ½ÏÂ·½µÄR¿ØÖÆÌ¨ÖÐ³öÏÖÁËÏàÍ¬µÄ´úÂë¡£Èç¹ûËùÓÐµÄ´úÂë¶¼ÊÇÕýÈ·µÄ£¬¿ØÖÆÌ¨¾Í²»»á±¨´í»òÕß¾¯¸æ¡£µã»÷Run°´Å¥ºó£¬R±àÒëÆ÷¾ÍÖªµÀÁËMyMode£¨£©º¯Êý£¬²¢ÇÒ×¼±¸Ê¹ÓÃÁË¡£ÔÙÔÚ¿ØÖÆÌ¨ÖÐÊäÈë£º
+
+```r
+MyMode(tinyData)
+```
+
+```
+##  [1] 1 2 1 2 3 3 3 4 5 4 5
+```
+³ÌÐò½«·µ»ØÎÒÃÇËùÆÚÍûµÄtinyDataµÄÄÚÈÝ¡£Õâ¸öÀý×ÓÖÐ£¬tinyData¾ÍÊÇº¯ÊýµÄÊäÈë²ÎÊý£¬´ÓÕâ¸öÀý×ÓÎÒÃÇ¾Í¿ÉÒÔ¿´³öº¯ÊýµÄ²ÎÊýÊÇÈçºÎ¹¤×÷µÄ¡£µ±º¯ÊýÔËÐÐÊ±£¬Æä½«tinyDataµÄÄÚÈÝ¸´ÖÆµ½myVectorÖÐ£¬ÒÔ·½±ãº¯ÊýÖÐÊ¹ÓÃ¡£ÏÖÔÚ£¬ÎÒÃÇÔÚº¯ÊýÖÐÐÂÌí¼ÓÒ»ÌõÓï¾ä£º
+
+```r
+MyMode <- function(myVector)
+{
+  uniqueValues <- unique(myVector)
+  return(uniqueValues)
+}
+```
+ÎÒÃÇ½«Ô­À´µÄMyModeº¯Êý½øÐÐÁËÇáÎ¢µÄ¸Ä¶¯£¬½á¹ûÈçÉÏËùÊö¡£ÎÒÃÇÖ»ÔÚÔ­º¯ÊýÖÐ¼ÓÁËÒ»ÐÐ´úÂë£¬±ÜÃâº¯Êý±äµÃ¹ýÓÚ¸´ÔÓ¡£ÎÒÃÇÏÈÀ´¿´¿´Õâ¶Î´úÂë¶¼¸ÉÐ©Ê²Ã´¡£Ê×ÏÈ²»ÒªÍüÁËÑ¡ÖÐ´úÂëÈ»ºóµã»÷¡°Run¡±°´Å¥£¬È»ºóÔÚR¿ØÖÆÌ¨ÖÐÔÙ´ÎÊäÈëMyMode£¨£©ÃüÁî£º
+
+```r
+MyMode(tinyData)
+```
+
+```
+## [1] 1 2 3 4 5
+```
+´úÂëµÄ×÷ÓÃ·Ç³£Ã÷ÏÔ£¬ÎÒÃÇµ÷ÓÃÁËunique()º¯Êý£¬Æä·µ»ØÔÚtinyDataÖÐ³öÏÖµÄÊýÖµµÄÁÐ±í£¬Õâ¸öÁÐ±íÖÐÃ¿¸öÊýÖµÖ»³öÏÖÒ»´Î¡£¼òµ¥µÄËµ£¬unique()º¯Êý¾ÍÊÇ½«ÊäÈëÏòÁ¿ÖÐ¶àÓàµÄÊýÖµÈ¥µô¡£½ÓÏÂÀ´ÎÒÃÇÈÃ´úÂë¸ü¸´ÔÓÒ»µã£º
+
+```r
+MyMode <- function(myVector)
+{
+  uniqueValues <- unique(myVector)
+  uniqueCounts <- tabulate(myVector)
+  return(uniqueCounts)
+}
+```
+ÈÔÈ»±ðÍüÁËÔÚÊ¹ÓÃÕâ¸öº¯ÊýÇ°ÒªÑ¡ÖÐ´úÂëÈ»ºóµã»÷¡°Run¡±¡£Õâ´ÎÎÒÃÇ½«tinyData×÷ÎªÊäÈë²ÎÊý´«¸øº¯Êý£¬µÃµ½µÄ·µ»ØÖµÒ²ÊÇÒ»¸öÓÐ5¸öÔªËØµÄÁÐ±í£¬µ«ÊÇÁÐ±íµÄÔªËØ±íÊ¾µÄÊÇÊäÈë²ÎÊýÖÐÃ¿¸öÊýÖµ³öÏÖµÄ´ÎÊý£º
+
+```r
+MyMode(tinyData)
+```
+
+```
+## [1] 2 2 3 2 2
+```
+ÏÖÔÚ²î²»¶à¸Ã½áÊøÎÒÃÇµÄMyMode()º¯ÊýÁË£¬µ«ÊÇÎÒÃÇµÃÈ·±£Àí½âÁËuniqueValuesºÍuniqueCountsÖÐµÄÄÚÈÝ£º
+
+ÏÂÃæµÄ±íÖÐÁÐ³öÁËuniqueValuesÖÐµÄÔªËØÒÔ¼°Æä¶ÔÓ¦µÄ¸öÊý¡£
+
+![](./img/9-2.jpg)
+
+Ê×ÐÐÏÔÊ¾¡°index¡±µÄ±êºÅÐÐ½ö½öÊÇ³öÓÚËµÃ÷µÄÄ¿µÄ¡£ÕâÐ©Ë÷ÒýÊý×ÖÓÃÀ´¶¨Î»ÁÐ±íÖÐ¶ÔÓ¦µÄÔªËØµÄ¡£±ÈÈç£¬uniqueValuesÁÐ±íÖÐÏÂ±êÎª4µÄÎ»ÖÃÖµÎª4£¬Æä¶ÔÓ¦µÄuniqueCountsµÄÖµÎª2¡£ÕâÑùÒ»À´£¬Èç¹ûÎÒÃÇÒªÑ°ÕÒ³öÏÖ´ÎÊý×î¶àµÄÊý×Ö£¬ÎÒÃÇÖ»ÐèÔÚ×îºóÒ»ÐÐÖÐÕÒµ½×î´óµÄÊýµÄÏÂ±ê£¬È»ºóÔÚuniqueValuesÁÐ±íÖÐÕÒµ½¸ÃÏÂ±ê¶ÔÓ¦µÄÖµ¼´¿É¡£ÔÚRÓïÑÔÖÐ£¬ÎÒÃÇÖ»ÐèÒ»ÐÐ´úÂë¾Í¿ÉÒÔÊµÏÖÇ°ÃæÃèÊöµÄ¹ý³Ì£º
+
+> uniqueValues[which.max(uniqueCounts)]
+
+ÆäÖÐ£¬whicn.max()º¯ÊýÓÃÀ´ÕÒµ½uniqueCountsÖÐ×î´óÊýÔÚÊý×éÖÐµÄÏÂ±ê£¬È»ºóÔÚuniqueValuesÖÐÍ¨¹ýÒ»¶Ô·½À¨ºÅ¾ÍÄÜ·ÃÎÊ·½À¨ºÅÖÐÏÂ±ê¶ÔÓ¦µÄÔªËØ¡£ÀýÈçuniqueValues[5]¾ÍÄÜµÃµ½uniqueValuesÖÐµÄµÚ5¸öÊý¡£ÎÒÃÇ°ÑÕâÌõÓï¾ä¼Óµ½returnÓï¾äÖÐ£¬À´Íê³ÉÎÒÃÇµÄº¯Êý£º
+
+```r
+MyMode <- function(myVector)
+{
+  uniqueValues <- unique(myVector)
+  uniqueCounts <- tabulate(myVector)
+  return(uniqueValues[which.max(uniqueCounts)])
+}
+```
+ÏÖÔÚÎÒÃÇ×¼±¸ÔÙ´Î²âÊÔÕâ¸öº¯Êý£¬×¢Òâ²»ÒªÍüÁËÑ¡ÖÐËùÓÐ´úÂëÈ»ºóÔËÐÐÒ»ÏÂ£¬·ñÔò±àÒëÆ÷¼Ç×¡µÄÖ»ÊÇ¾ÉµÄÄÇ¸öº¯Êý¡£ÎÒÃÇÏÈ»ØÒäÒ»ÏÂtinyDataÖÐ¶¼ÓÐÐ©Ê²Ã´ÔªËØ£¬È»ºóÔÙ°ÑtinyData×÷Îª²ÎÈü´«¸øº¯Êý£º
+
+```r
+tinyData
+```
+
+```
+##  [1] 1 2 1 2 3 3 3 4 5 4 5
+```
+
+```r
+MyMode(tinyData)
+```
+
+```
+## [1] 3
+```
+¿ÉÒÔ¿´³ö£¬º¯Êý¹¤×÷Õý³£¡£tinyDataÊý×éÖÐ³öÏÖ×î¶àµÄÊýÊÇ3¡£ÎÒÃÇ¼ÌÐø²âÊÔ¿´¿´º¯Êý»¹»á·¢ÉúÊ²Ã´£º
+
+```r
+tinyData <- c(tinyData,5,5,5)
+tinyData
+```
+
+```
+##  [1] 1 2 1 2 3 3 3 4 5 4 5 5 5 5
+```
+
+```r
+MyMode(tinyData)
+```
+
+```
+## [1] 5
+```
+ÎÒÃÇÏòtinyDataÊý×éÄ©Î²ÖÐÌí¼ÓÁËÈý¸ö5£¬ÏÖÔÚtinyDataÖÐÓÐÎå¸ö5£¬MyMode()º¯ÊýÒ²Ö´ÐÐ³É¹¦¡£ÎÒÃÇÔÚ¼ÌÐø²âÊÔ£º
+
+```r
+tinyData <- c(tinyData,1,1,1)
+tinyData
+```
+
+```
+##  [1] 1 2 1 2 3 3 3 4 5 4 5 5 5 5 1 1 1
+```
+
+```r
+MyMode(tinyData)
+```
+
+```
+## [1] 1
+```
+Äã»á·¢ÏÖÕâºÜÆæ¹Ö£¬ÏÖÔÚtinyDataÖÐÃ÷Ã÷ÊÇ1ºÍ5¶¼ÓÐÎå¸ö£¬µ«ÊÇº¯Êý·µ»ØµÄµÄÈ·ÊÇ1¡£ÆäÊµÄãÍêÈ«²»±Ø¾ªÑÈ£¬which.max()º¯ÊýµÄËµÃ÷ÎÄµµÀïÒÑ¾­Ð´Çå³þÁË£¬Õâ¸öº¯Êý»á·µ»ØÆäÕÒµ½µÄµÚÒ»¸ö×î´óÖµ¡£ËùÒÔ³öÏÖÉÏÃæµÄ½á¹ûÊÇÇéÀíÖ®ÖÐµÄÊÂ¡£ÊÂÊµÉÏ£¬ÕâÒ²×ÜÊÇÍ³¼ÆÑ§ÖÐ³£¼ûµÄÒ»¸öÎÊÌâ£ºÊý¾Ý¼¯ÖÐ²»Ö¹Ò»¸öÄ£Ê½¡£ÎÒÃÇµÄMyMode()º¯Êý»¹ÎÞ·¨ÊµÏÖÕâÑùµÄ¹¦ÄÜ£¬Ò²²»ÄÜ¸ø³öÈÎºÎ¾¯¸æËµÃ÷Êý¾ÝÖÐ³öÏÖ´ÎÊý×î¶àµÄÊý²»Ö¹Ò»¸ö£¬¶øÖ»ÊÇ¼òµ¥µÄ·µ»ØÆäÖÐÕÒµ½µÄµÚÒ»¸ö¡£
+Õâº¯ÊýÖÐ»¹ÓÐÁíÒ»¸öÎÊÌâ£º
+
+```r
+tinyData <- c(tinyData,9,9,9,9,9,9,9)
+MyMode(tinyData)
+```
+
+```
+## [1] NA
+```
+
+```r
+tabulate(tinyData)
+```
+
+```
+## [1] 5 2 3 2 5 0 0 0 7
+```
+µÚÒ»ÐÐ´úÂëÖÐ£¬ÎÒÃÇÔÚtinyDataºóÃæ¼ÓÁËÒ»Á¬´®¡°9¡±£¬×¢ÒâtinyDataÖÐÃ»ÓÐ6,7,8¡£¶øÎÒÃÇÔËÐÐMyMode()È´·µ»Ø¡°NA¡±£¬ÕâÔÚRÖÐ±íÊ¾Ä³´¦³ö´íÁË£¬ÄãµÃµ½ÁËÒ»¸ö¿ÕµÄÖµ¡£Èç¹ûÎÒÃÇ²»ÊäÈë×îºóµÄ¡°tabulate(tinyData)¡±Óï¾ä£¬ºÜÄÑ¿´³ö³ÌÐòÎªÊ²Ã´»á³öÏÖÕâÃ´¹ÖÒìµÄÐÐÎª¡£
+
+
