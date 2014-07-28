@@ -23,7 +23,7 @@
 12. chp11 Popularity Contest 负责人 ：[燃芝]() []()  状态：待认领/进行中/完成
 13. chp12 String Theory 负责人 ：[]() []()  状态：待认领/进行中/完成
 14. chp13 Word Perfect 负责人 ：[vicky]() [乐果]()  状态：进行中
-15. chp14 Storage Wars 负责人 ：[ripe]() [Young]()  状态：待认领/进行中/完成
+15. chp14 Storage Wars 负责人 ：[ripe]() []()  状态：待认领/进行中/完成
 16. chp15 Map MashUp 负责人 ：[]() []()  状态：待认领/进行中/完成
 17. chp16 Line Up, Please 负责人 ：[]() []()  状态：待认领/进行中/完成
 18. chp17 Hi Ho, Hi Ho - Data Mining We Go 负责人 ：[]() []()  状态：待认领/进行中/完成
