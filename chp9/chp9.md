@@ -1,6 +1,5 @@
----
-output: html_document
----
+#第九章 开始R-Studio
+
 ![](./img/9-head.jpg)
 
 **作为一个拥有活跃的用户社区的开源软件，R之所以能不断创新发展离不开社区志愿者无私贡献。其中一个非常重要的创新就能完美支持R语言副本的R-Studio框架。本章从R-Studio的安装开始，然后再详细介绍了“包”——扩展R的关键。**
@@ -49,7 +48,7 @@ tinyData
 
    Error: could not find function "MyMode"
 
-哦，出错了！R还不知道我们的新函数呢。我们虽然在代码窗口输入了MyMode（）函数，但是还没有告诉R呢。查看左上角的窗口，你可以看到MyMode（）函数的代码，以及在代码上方的工具栏中有一些小的按钮，其中有一个旁边写着“Run”的向右的箭头。选中MyMode()函数的所有代码（从字面“M”到最后的大括号），然后点击Run按钮，你就会立即看到下方的R控制台中出现了相同的代码。如果所有的代码都是正确的，控制台就不会报错或者警告。点击Run按钮后，R编译器就知道了MyMode（）函数，并且准备使用了。再在控制台中输入：
+噢，出错了！R还不知道我们的新函数呢。我们虽然在代码窗口输入了MyMode（）函数，但是还没有告诉R呢。查看左上角的窗口，你可以看到MyMode（）函数的代码，以及在代码上方的工具栏中有一些小的按钮，其中有一个旁边写着“Run”的向右的箭头。选中MyMode()函数的所有代码（从字面“M”到最后的大括号），然后点击Run按钮，你就会立即看到下方的R控制台中出现了相同的代码。如果所有的代码都是正确的，控制台就不会报错或者警告。点击Run按钮后，R编译器就知道了MyMode（）函数，并且准备使用了。再在控制台中输入：
 
 ```r
 MyMode(tinyData)
@@ -229,13 +228,15 @@ MyMode(tinyData)
 
 我们先来试试mfv()函数，这个函数返回一个向量中出现次数最多的数，这个功能也是我们在函数中经常用到的：
 
+
 ```r
 mfv(tinyData)
 ```
 
 ```
-## Error: could not find function "mfv"
+## [1] 9
 ```
+
 到目前为止一切都很顺利，这个函数似乎和我们的MyMode()函数做了一样的事，尽管其方法可能不一样。事实上，想知道这个函数是怎么实现的也非常简单，只需在R命令行中输入函数名字即可：
 
 ```r
@@ -243,7 +244,13 @@ mfv
 ```
 
 ```
-## Error: object 'mfv' not found
+## function (x, ...) 
+## {
+##     f <- factor(x)
+##     tf <- tabulate(f)
+##     return(as.numeric(levels(f)[tf == max(tf)]))
+## }
+## <environment: namespace:modeest>
 ```
 这是开源程序最棒的一件事：你可以轻松的查看底层的具体实现。注意到尽管这个函数也是用了tabulate()函数，但其方法和和我们的MyMode()函数完全不同。最后一行以“environment”开头的信息在更加复杂的编程中非常重要，因为其指明了函数mfv()是来自哪里。这个函数的其他方面就不是特别明显了，其中还有一个特点是当你输入的参数列表中出现次数最多的数不止一个时，函数会正确返回所有出现次数最多的数，比如输入以下向量：
 
@@ -253,15 +260,15 @@ mfv(multiData)
 ```
 
 ```
-## Error: could not find function "mfv"
+## [1] 7 9
 ```
 
 ```r
-MyMode(myltiData)
+MyMode(multiData)
 ```
 
 ```
-## Error: object 'myltiData' not found
+## [1] 7
 ```
 上面第一语句中，我们输入了一个新的向量，其中数字7和9出现次数最多，都为两次，而其他数则只出现了一次。当我们调用mfv()函数来处理这个向量是，mfv()函数能正确返回7和9这两个数，而是用MyMode()函数，则只能返回第一次找到的出现最多的数，也就是7。
 
@@ -270,21 +277,34 @@ MyMode(myltiData)
 这些具有专门功能的函数是由R社区的贡献者们创造的，以额外函数的形式出现。通过创建自己的函数，我们知道了函数接受“参数”作为其输入，然后给出一个返回值。返回值是一个数据对象，因此可以是一个单一的数字（从技术上将就是一个元素个数为1的向量），或者返回一串值（即一个向量），或者更负责的数据对象。在本书后面的章节中，我们会经常自己写函数，然后重复使用。也会经常使用别人的函数，这时只需按照他们的包然后用library()函数载入即可。将包载入后，在R命令行中输入函数的名字，就可以查看函数是如何实现的。（注意对一小部分用其他编程语言，比如C，编写的函数就不能用这种方法查看函数的实现了）
 
 **本章挑战**
+
 编写并测试一个MySamplingDistribution(),根据输入的数值向量，创建其均值构成的抽样分布。你需要将这章所学的创建函数的知识和前面所学的创造抽样分布的知识结合到一起，来写出一个可用的函数。写之前一定好仔细考虑函数的输入参数和返回的数据对象。
 
 **资源**
+
 <http://en.wikipedia.org/wiki/R_(programming_language)>
+
 <http://en.wikipedia.org/wiki/Joseph_J._Allaire>
+
 <http://stats.lse.ac.uk/penzer/ST419materials/CSchpt3.pdf>
+
 <http://www.use-r.org/downloads/Getting_Started_with_RStudio.pdf>
+
 <http://www.statmethods.net/interface/packages.html>
+
 <http://www.youtube.com/watch?v=7sAmqkZ3Be8>
 
 **本章用到的R命令**
+
 function()——创建一个新的函数
+
 return()——返回一个值来结束函数
+
 tabulate()——统计一个向量中每个数出现的次数
+
 unique()——取输入向量中的不重复元素构成新的向量
+
 match()——返回两个向量中都存在的元素
+
 mfv()——出现次数最多的元素（来自modeest包）
 
