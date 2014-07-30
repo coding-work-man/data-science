@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>第七章：罐子中的样本</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>第七章：罐子中的样本</h1>
+
+<hr/>
+
+<p><center>
+<img src="./img/jar.jpg" alt="header"/></p>
+
+<h2></center></h2>
+
+<p>抽样分布是理解统计推断的关键概念。为了理解随机性在抽样时所产生的影响，很多讲解抽样分布的方法都提到了从罐子中抽取弹球或糖果这样的经典例子。通过前面提到的美国人口的例子，我们可以清楚的看到尽管总体的分布不是正态的，但其样本均值的分布却服从正态分布。</p>
+
+<p>想象你拥有一个装满了红色和蓝色糖果的罐子。罐子中放入的红色糖果和蓝色糖果各有100颗，但这些糖果在放入罐中时是混合在一起的。如果你从罐中随机抽取8颗糖果，你会得到什么颜色的糖果？如果抽取如想象中般顺利的话（虽然通常都没那么走运），你将会抽到4颗红糖果和4颗蓝糖果。红的和蓝的各占一半，这个比例和罐中的红蓝比例是一样的。当然了，你很难抽到这个结果，是不？除了4红4蓝的组合，你也可能会抽到3颗红糖果和5颗蓝糖果，或者其他各种你能想到的组合。事实上，尽管概率很小，但你还是有可能抽中8颗红色的。虽然有多种可能，但仅就一次抽取结果来看，我们是无法预测会抽到红和蓝的哪种组合的。而这种不确定性，就是能够以无法预知的方式来影响你抽取结果的随机性的力量。</p>
+
+<p>我们现在提出一个有趣的想法，这虽然对预测单次抽取结果没什么帮助，但却能很好的展示多次抽取的*长期趋势*。从罐子中抽取8颗糖果，数一数其中有多少红色的，然后将所有的糖果都放回罐中。我们并不需要数蓝色糖果的数量，这是因为 <code>8 - 红色糖果的数量 = 蓝色糖果的数量</code>。将罐中的糖果晃动一下，这样能混合的更好一些，然后再抽取8颗糖果，同时数一下红色糖果的数量。将这种操作重复多次，我们可以对每次记录的结果用下面的表格来表示：
+<center></p>
+
+<table>
+   <tr>
+      <td>抽取次数</td>
+      <td>红色糖果的数量</td>
+   </tr>
+   <tr>
+      <td><center>1</td>
+      <td><center>5</td>
+
+   </tr>
+   <tr>
+      <td><center>2</td>
+      <td><center>3</td>
+   </tr>
+   <tr>
+      <td><center>3</td>
+      <td><center>6</td>
+   </tr>
+   <tr>
+      <td><center>4</td>
+      <td><center>2</td>
+   </tr>
+</table>
+
+<p></center></p>
+
+<p>注意到表格左边的列就是对抽取次数的计数而已。表格右边的列是我们感兴趣的内容，它列出了每次抽样中的红色糖果数量。在本例中，红色糖果的数量真是天南海北。在第4次抽样时，我们只抽到了两颗红色糖果，但是在第3次抽样时，我们却抽到了足足6颗红色糖果。但是本例最有趣的地方就是，如果你将这4次抽取的红色糖果数量进行<em>算术平均*，你会得到平均每次抽到*正好4颗红色糖果*的结果，而这正是我们期望的红蓝各半的罐子中应该抽出的结果。以上只是一个人为制造的例子，而我们在平时抽取时，很难在仅仅4次抽取之后就遇到这么好的平均的结果。但是如果你将随机抽取这一操作，进行了4000次，你将会肯定得到一个接近 **平均每次抽到4颗红色糖果</em>* 的完美结果。</p>
+
+<p>从总体中不断的抽取子集的过程称为“抽样”，而经过大量的抽样之后，我们会最终得到抽样分布。注意到，在刚才这句话中，我们用到了“总体”这个词汇，用来代表我们从什么地方做的抽样，这也是它的统计含义。在前面章节的例子中，我们的数据集包含美国各个州的人口数量，这个“人口”与“总体”同样使用英文单次 population 可以说是一个巧合。下面，我们使用 R 来帮助我们从美国各州人口数据集中抽取大量样本。</p>
+
+<p>R 中有一个很便捷的函数 sample()，可以用来从数据集中简便的抽取样本。我们可以用它来从我们的数据集中抽取样本：</p>
+
+<pre><code class="r">set.seed(31415)
+sample(USstatePops$V1, size = 16, replace = TRUE)
+</code></pre>
+
+<pre><code>##  [1]  1852994  4339367  3574097  2967297  2915918  4533372  1360301
+##  [8]  5773552  6724540  6346105  3574097  3751351  1052567 37253956
+## [15]   814180  3046355
+</code></pre>
+
+<p>(译者注：原著中并未使用set.seed()来设置随机的种子，这会导致读者的可重复性研究非常困难。在本章中我们统一将种子设置为31415。读者也如此设置，便可实现和我们相同的抽样结果。)在本例中，注意到我们调用的sample()函数含有三个参数。第一个参数是数据源。对于第二个和第三个参数，为了让 R 能够正确识别，我们采用了“命名参数”的方式来调用，而不是单靠这些参数在参数列中的位置。参数 <code>size = 16</code> 可以让 R 从总体中抽取16个州的人口作为样本。参数 <code>replace = TRUE</code> 则规定了一种统计学家经常用来简化数学证明的抽样方法。对我们来说，采取放回抽样还是不放回抽样通常没有实际的影响，所以我们直接使用统计学家的常用方法。</p>
+
+<p>相较于给抽取的各色糖果计数，我们在处理类似于各州人口的这类数值时，对其算数平均数，或者称为均值，更感兴趣。于是我们可以让 R 使用mean()来计算所抽取的样本均值：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(sample(USstatePops$V1, size = 16, replace = TRUE))
+</code></pre>
+
+<pre><code>## [1] 5617503
+</code></pre>
+
+<p>从上面的mean()函数可以看出，我们又遇到了函数的嵌套调用了。我们在mean()函数的输出中并未看到从51个州中随机抽取的16个州人口数值，而是看到了mean()函数直接用这16个数来为我们计算出来的均值。如果你的记忆力很好，或者往前面的章节翻一下，你会看到51个数值的均值是 6053834. 于是你会发现我们从这16个州
+的样本获得的均值真的是离总体的均值相差的有点远。我们是不是应该感到焦虑？当然不是！我们知道，当抽取样本时，无论是抽取糖果，还是抽取各个州，我们的样本均值永远都不会和总体均值正好一样。其实我们并非对某一次抽样的结果感兴趣，而是要专注于长期抽样的结果。于是，我们现在要让 R 来帮我们做重复抽样了，不是抽取1次、4次，而是400次甚至4000次。和其他的编程语言一样，R 有很多方法可以重复某个操作。其中最简单的一个方法非replicate()函数莫属。让我们先尝试一下重复4次：</p>
+
+<pre><code class="r">set.seed(31415)
+replicate(4, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), simplify = TRUE)
+</code></pre>
+
+<pre><code>## [1] 5617503 3945129 6510150 4407374
+</code></pre>
+
+<p>简单的不可思议吧！我们仍然使用了刚才用过的命令，即用来计算16个州的均值的mean()函数。只不过这一次，我们将mean()函数作为一个参数放到replicate()函数里面，于是我们才可以一次又一次的求均值。其中的 <code>simplify = TRUE</code> 参数是让 R 将函数运行的结果以一个均值构成的向量形式返回，而这正是我们想要的形式。由于我们只将mean()函数运行了4次，所以我们不会看到满屏的数字。从刚才的尝试来看，我们可以很轻易地将求均值的过程重复400次。你可以自己试一下，看看结果。至于在本书中，我们要将replicate()函数整个塞进另一个mean()函数，于是我们可以得到400个样本均值的平均数。我们来看一下：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(replicate(400, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), 
+    simplify = TRUE))
+</code></pre>
+
+<pre><code>## [1] 5983180
+</code></pre>
+
+<p>在上述命令中，最外层的mean()函数地位与之前命令的不同。将这个多层嵌套的命令的效果，用语言来描述一下就是：a)从51个州的总体中抽取400个样本容量为16的样本; b)对每一个样本计算其样本均值，并将均值保存到一个列表中; c)当计算完这400个均值后，计算包含有400个均值的列表的均值。从刚才的计算结果可以看到400个样本的均值是5983180. 虽然这个值和总体均值仍然不相等，但是已经接近了。我们距离总体均值的真值大概70000多，大概是1.16%(更精确的数值为70654/6053834 = 1.167%)。你可能也注意到了，即使你有一个速度较快的电脑，运行刚才的命令也得花一些时间。因为刚才的命令的确包含了很多操作！让我们更进一步，看看我们是否能更加接近总体均值：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(replicate(4000, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), 
+    simplify = TRUE))
+</code></pre>
+
+<pre><code>## [1] 6052941
+</code></pre>
+
+<p>现在我们更加接近真值了！我们得到的均值距离总体均值的真值只差不到千分之一！你可能注意到你在运行上述几个命令时得到的结果与我们有少许不同，这是因为你在运行sample()函数时，随机抽取的400或4000个样本与上述命令得到的不同，但是最终均值结论的精确性却相差不多。(译者注：这是由于原著中没有使用set.seed()来明确生成的随机序列，读者如果按照译文中的命令来执行，是会得到与我们完全相同的结论的。我们也建议读者在任何涉及到随机抽样的模拟中，添加set.seed()，以便将来的可重复性研究。)</p>
+
+<p>我们准备进行下一步了。这次我们不用一个简单的算术平均来概括抽样分布的均值了，我们使用更复杂的直方图来观察抽样分布的均值序列。</p>
+
+<p>这个直方图展示了4000个均值的频数分布。对这张图详细观察可以训练你阅读频数直方图的能力。这个直方图具有典型的近乎于钟形的但仍然有点右偏的形状。最高的，也就是频数最大的区间正好和均值真值6053834不远。</p>
+
+<p>另外，你能否自己找出生成这张直方图的命令？你只需要将前面的命令之中的最外层mean()函数替换为hist()函数即可。在本例中，代码如下：</p>
+
+<pre><code class="r">set.seed(31415)
+hist(replicate(4000, mean(sample(USstatePops$V1, size = 16, replace = TRUE)), 
+    simplify = TRUE), main = &quot;Frequency of 4000 sample mean&quot;, xlab = &quot;Sample Mean&quot;)
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-7"/> </p>
+
+<p>这是一个伟大的时刻，请让我们做一下深呼吸。我们刚刚仅用短短几页就概括了统计思想在数百年间的成果。事实上，我们提到的有两个重要思想，“大数定律”和“中心极限定理”。这两个重要理论的确花费了像Gerolamo Cardano(1501-1576)和Jacob Bernoulli(1645-1705)这些数学家们数个世纪才最终得到。如果你去查阅这些理论，你会发现有很多令人迷惑的数学论证细节，但对我们来说，在这之中是两个浅显的道理。首先，如果你运行了同一个统计过程很多次数，则最后通常会收敛到一个稳定的结果。对本例来说，我们知道50个州加上哥伦比亚特区（即华盛顿首府）的平均人口是多少。这51个观测值就是我们的总体，此时我们想知道要像得到这个均值真值的较好的近似，我们需要抽取多少个容量为16的样本。我们了解到只抽取一个样本会得到较差的结果。抽取400个样本能够得到距离真值只差1.16%的较小的误差。而抽取4000个样本得到的均值距离真值的差距都不超过千分之一。如果我们将抽样过程重复40000次乃至400000次，我们会得到和真值6053384极端接近的所有样本的均值。</p>
+
+<p>其次，当我们将大数定律纳入考虑，并将其运用到样本均值时，我们发现样本均值形成的分布开始向钟形或正态分布靠拢，所有样本均值的均值也和总体均值真值越来越近。样本容量越大，则均值接近真值的速度也越快，相反，当样本容量小的时候，你就得抽取非常多的样本来使得样本均值的均值和总体均值足够接近。为了说明这一点，我们举一个有趣的例子，该例中样本容量大于16. 我们抽取的样本容量为 <code>n = 51</code>(与总体的单位数量相同)，共重复抽取100次：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(replicate(100, mean(sample(USstatePops$V1, size = 51, replace = TRUE)), 
+    simplify = TRUE))
+</code></pre>
+
+<pre><code>## [1] 6016650
+</code></pre>
+
+<p>现在我们的计算结果与总体均值已经相差不超过1%了。你可能会觉得有点摸不到头脑，“等一等，难道样本容量为51不就是把总体中所有的单位都抽取了吗？”这的确让人迷惑，但这个问题可以追溯到前几页里我们提到的可放回抽样（当时我们在抽样命令里也是使用了 <code>replace = TRUE</code> 这个参数）。可放回抽样的意思是随着你从总体中抽取了一个单位来放到你的样本中，紧接着你就把它又放回了总体的单位里去，这也意味着你有潜在的可能性在接下来的抽取过程中再次抽中它。如前文所说，我们已经省略掉了相应的证明部分，而这除了会让你迷惑以外，并不产生任何问题。事实上，我们可以让样本容量更大，而不会带来任何麻烦：</p>
+
+<pre><code class="r">set.seed(31415)
+mean(replicate(100, mean(sample(USstatePops$V1, size = 120, replace = TRUE)), 
+    simplify = TRUE))
+</code></pre>
+
+<pre><code>## [1] 6028504
+</code></pre>
+
+<p>这个命令对容量为 <code>n = 120</code> 的样本重复抽取了100次。让我们来看看抽样分布的均值和总体均值有多么的接近了！回顾之前我们提到过的，每次你运行这个程序，你都会得到稍微不同的结果，这是因为每次抽取的都是不同的样本（译者注：如果使用了set.seed()就不会遇到这种情况）。但是按照以往的经验，随着统计学家们用 <code>n</code> 来表示的样本容量越来越大，你对总体均值的估计也会越来越接近真值。相应的，如果你抽取更多的样本量，你的估计也是越来越准的。</p>
+
+<p>现在，如果你已经从刚才的状况缓了过来，那么就让我们来进一步的利用抽样分布来做更多的事情吧。首先，让我们将所有样本均值保存下来，以便我们可以对这列数进行下一步的计算：</p>
+
+<pre><code class="r">set.seed(31415)
+SampleMeans &lt;- replicate(10000, mean(sample(USstatePops$V1, size = 5, replace = TRUE)), 
+    simplify = TRUE)
+</code></pre>
+
+<p>我们是将所有的抽样均值保存到一个称为“SampleMeans”的新向量中。我们应该有10000个样本均值：</p>
+
+<pre><code class="r">length(SampleMeans)
+</code></pre>
+
+<pre><code>## [1] 10000
+</code></pre>
+
+<p>这些抽样均值的算术平均数应该和我们的总体均值6053384相当接近：</p>
+
+<pre><code class="r">mean(SampleMeans)
+</code></pre>
+
+<pre><code>## [1] 6062372
+</code></pre>
+
+<p>你可能还想要对 SampleMeans 生成一个直方图，来看看频数分布是如何的。目前，我们所需要查看的只是这列抽样均值数列的一个总括：</p>
+
+<pre><code class="r">summary(SampleMeans)
+</code></pre>
+
+<pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##   822000  3880000  5380000  6060000  7650000 24500000
+</code></pre>
+
+<p>如果你需要回顾中位数（median）和分位数（quantile）的概念，可以回头看看第3章-行和列。</p>
+
+<p>这个总括里包含了很多信息。首先让我们来看看最大值（max）和最小值（min）。这列样本均值的最小值是822000。让我们思考一下，当我们知道总体均值是那么大的时候，怎么会抽取到均值这么小的样本呢？怀俄明州（Wyoming）在那个样本中一定被抽到过好几次吧！答案和伴随着抽样过程的随机性有关。如果你运行某个随机抽样程序10000次，那么你肯定会遇到几个很怪异的样本的。这很像是买彩票。你买的大多数彩票都是正常的——中不了奖的。但是就在某个时刻，你也会遇到那个极其特殊的大奖。抽样过程和此类似：极端特殊的情况是很不寻常的，但是如果你抽样的次数足够多，你也会遇到这种情况的。对于最大值我们也有类似的结论：我们抽到的最大的样本均值24500000，比总体均值大得多。</p>
+
+<p>SampleMeans的中位数5380000和均值6060000比较接近，但并不完全相同。这是因为我们的样本均值分布有点右偏（数值较大的右侧尾巴比对称情况下要长，这是由于原始分布是反向J形的）。中位数是很有用的，这是因为它把所有的样本等分为两半：50%，或者5000个样本均值是比5380000大的，另外一半是比5380000要小的。因此，如果我们此时要从总体中再随机抽取一个样本的话，那么它就有一半的可能性大于中位数。分位数能够帮助我们更好的对数据进行分割。第三分位数将数据较小的75%和较大的25%分开。因此只有25%的样本均值大于7650000。这意味着如果我们再从总体中随机抽取一个样本的话，那么这个样本均值只有25%的可能性是大于7650000的。类似的，第一分位数告诉我们，如果随机抽取一个新的样本的话，那么样本均值只有25%的可能性是比3880000要小的。</p>
+
+<p>有另外一种更加灵活的从R中获取相同信息的方法. quantile()函数可以展示中位数以及分位数, 例如</p>
+
+<pre><code class="r">quantile(SampleMeans, probs = c(0.25, 0.5, 0.75))
+</code></pre>
+
+<pre><code>##     25%     50%     75% 
+## 3875658 5379840 7649252
+</code></pre>
+
+<p>你会注意到这些数值与上文summary()函数展示的数值的少了千分之一(one tenth of one percent). quantile()函数的结果比较精准, 尽管summary()函数的结果可以满足绝大多数的需求. 使用quantile()函数的另一个原因是我们可以精准的控制分割点. 为了得到分位数, 我们在25%, 50%, 75%进行分割. 但是如果我们希望在2.5%和97.5%进行分割该怎么办? 这对于quantile()函数来说很容易:</p>
+
+<pre><code class="r">quantile(SampleMeans, probs = c(0.025, 0.975))
+</code></pre>
+
+<pre><code>##     2.5%    97.5% 
+##  2019463 13318627
+</code></pre>
+
+<p>在这个例子里, 如果我们选取新的样本, 样本均值仅有2.5%的几率低于2019463. 类似的, 样本均值仅有2.5%的可能性会大于13318627(因为有97.5%的数值低于样本均值的分布).</p>
+
+<p>我们来做个练习. 这里的人在一定区域内，其中每一个领域是某种与美国相关联的单元的数目的样本</p>
+
+<p>3,706,690
+159,358
+106,405
+55,519
+53,883</p>
+
+<p>我们可以很容易的在R中计算样本均值</p>
+
+<pre><code class="r">MysterySample &lt;- c(3706690, 159358, 106405, 55519, 53883)
+mean(MysterySample)
+</code></pre>
+
+<pre><code>## [1] 816371
+</code></pre>
+
+<p>我们的神秘样本的均值是 816371. 但问题是, 这是一个美国各州的样本还是其他? 仅有这一个样本很难回答这个问题. 我们首先会观察到样本中含有比Kansas, Utah, Nebraska 和其他几个州都要多的人数. 从上文的人口数据的分布我们也可以看出很多州的人数都很小. 多亏了我们在上文中举的例子使得我们可以更好的进行比较. 我们有样本均值的分布并且我们可以很公平的拿新的样本均值与之对比, 新的均值超出了样本分布的极限区域, 也就是低于2.5%或高于97.5%. 故我们的神秘样本看起来不像是美国各州的取样.</p>
+
+<p>既然这样, 我们可以清楚的看到816371处在样本分布的极低区域. 回想我们使用quantile()函数时我们发现仅2.5%的样本均值低于2019463.</p>
+
+<p>事实上, 我们可以使用更为严格的标准:</p>
+
+<pre><code class="r">quantile(SampleMeans, probs = c(0.005, 0.995))
+</code></pre>
+
+<pre><code>##     0.5%    99.5% 
+##  1414671 17084662
+</code></pre>
+
+<p>quantile()函数显示仅有0.5%的样本均值低于1414671. 因此我们的神秘样本的均值816371如果是美国各州的采样, 那么必然是个小概率事件. 从这一点我们可以基于有力的统计证据来暂时推测, 我们的神秘样本<strong>不是</strong>美国各州的采样. 神秘样本的均值比美国各州样本的均值小太多.</p>
+
+<p>事实上我们的推测是正确的: 神秘样本包含五个不同的美国领土, 其中包含在太平洋加勒比海地区的Puerto Rico. 那些领土是由一些大陆块和与美国有关系的一群人组成, 但是他们与美国各州不同. 也就是说他们都是岛屿, 因此他们的人口数都限制在大陆块中. 尽管在美国各州中仅夏威夷是岛屿, 但事实上夏威夷岛是美国大陆上各州面积的10倍以上. 这个例子中我们最值得学习的就是这组数据的属性, 尤其是与已知样本均值的分布不同的均值, 可以让我们推断出这组数据并非从原始数据中采样.</p>
+
+<p>这是所有统计推断的基础. 你构建一个比较分布并且划分出一些极限值所在的区域,然后你用新获取到的数据与已知分布进行比较看新样本是否会落入极限区域. 如果新样本符合上述规律, 那么你可以暂时认为新样本是从其他数据源获取到的.</p>
+
+<p>如果你有一些困惑，那么不要气馁. 上一段话代表了四五百年的数学发展. 在没有像R这样的可以创造和分析真实样本分布的工具之前, 上述的绝大多数材料仅是一系列的公式和证明. 在后续的章节里我们会回到用户证明上述描述的特定统计规程. 但是现在我们仅需要记下其他三条信息.</p>
+
+<p>第一, 我们使用mean()函数查看样本均值的分布和使用hist()函数查看它的形状, 但是我们从不量化分布的离散程度.</p>
+
+<pre><code class="r">sd(SampleMeans)
+</code></pre>
+
+<pre><code>## [1] 3016920
+</code></pre>
+
+<p>这里显示样本分布的标准差. 统计学家称之为&quot;均值的标准误差&quot;. 这个拗口的术语有另外一个清晰但较长的解释: 人口采样的样本分布均值的标准偏差. 不幸的是, 统计学家并非全都知道. 当我们看一个分布并且分布中的每个点都代表一个样本(例如, 一个均值), 那么标准差就可以认为是标准误差.</p>
+
+<p>第二, 发现标准误差其实不需要构造一个10000个（或其他任意个数的）样本均值构成的经验分布. 事实上, 原始数据的标准差和标准误差具有一定的关系:</p>
+
+<pre><code class="r">sd(USstatePops$V1)/sqrt(5)
+</code></pre>
+
+<pre><code>## [1] 3051779
+</code></pre>
+
+<p>上述公式表示用原始数据的标准差除以样本大小的平方根. 在上文中当我们使用replicate()和sample()命令创建SampleMeans向量时, 我们使用的样本大小n=5. 这就是为什么你在上文中看到sqrt(5)的原因. 在R或者其他软件中sqrt()是&quot;square root&quot;的简写, 而不是你预期的&quot;squirt&quot;. 因此如果你有一系列数据并且你想计算他们的标准差,  你可以计算样本均值分布的标准误差(每一个都有相同的样本大小), 除以样本大小的平方根. 你可能发现通过使用这种方法得出的结果会比直接从样本分布中得到的结果大一些, 但是这种差异没有任何意义(仅是因为分布的随机性导致). 另一个你会注意到的事情是样本空间越大, 标准差越小. 这对于样本的选择有很重要的法则: 样本越大越好.</p>
+
+<p>最后是另外一个简便方法. 我们创建样本分布的97.5%的分割点并且使用quantile()函数计算真实的分割. 我们同样可以使用均值和标准差计算分割点. 均值减去2倍标准差就是2.5%的分割点, 均值加上2倍标准差就是97.5%的分割点.</p>
+
+<pre><code class="r">StdError &lt;- sd(USstatePops$V1)/sqrt(5)
+CutPoint975 &lt;- mean(USstatePops$V1) + (2 * StdError)
+CutPoint975
+</code></pre>
+
+<pre><code>## [1] 12157391
+</code></pre>
+
+<p>你会发现这个数值与我们使用quantile()函数计算全部分布的数值有差别. 这种差异由我们构建的分布的随机性导致. 上述结果仅是基于统计证明的估计值, 而我们创建的SampleMeans 数据集仅是我们能创建的最大的接近无限的集合. 我们可以很容易的通过使用更大的样本容量和添加更多的抽样分布的抽取次数来降低两种方法之间的矛盾.</p>
+
+<p>总结一下, 我们使用了一个有51个美国各州人口数据的数据点和一些R的知识创建了一个样本均值分布, 我们学到了以下知识:</p>
+
+<ul>
+<li>持续运行一个统计过程多次你就可以得到一致的规律.</li>
+<li>计算大样本的均值和绘制直方图可以展示样本均值是正态分布并且分布中心与原始数据的均值接近.</li>
+<li>样本均值形成的分布可以用来进行比较. 通过在极低的区域和极高的区域使用分割点, 例如2.5%和97.5%, 我们可以把它与新获取的样本进行比较.</li>
+<li>如果我们获得新的样本均值, 并且我们发现它掉入我们设定的极限区域, 我们可以暂时认为新样本与之前的数据来自不同数据源.</li>
+<li>另外一种更精确的计算标准差的方法是使用原始数据的标准误差.</li>
+</ul>
+
+<p>目前为止我们仍不是统计学家, 但是建立在样本分布上的推理过程是统计推理的核心. 假如你理解了本章的内容, 你已经向成为一个应用统计人才的道路迈出了坚实的一步. </p>
+
+<p>本章测试
+收集一个包含至少20个数据点的样本并且构造样本分布. 计算标准差和并且使用标准误差计算2.5%和97.5%的分布分割点. 你收集的数据点必须代表相同数量的现象. 例如, 你可以手机20本教科书的价格, 或者统计20段文字中的单词数量.</p>
+
+<p>资源  </p>
+
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Central_limit_theorem">中心极限定理</a><br/></li>
+<li><a href="http://en.wikipedia.org/wiki/Gerolamo_Cardano">Gerolamo Cardano</a><br/></li>
+<li><a href="http://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli</a><br/></li>
+<li><a href="http://en.wikipedia.org/wiki/Law_of_large_numbers">大数定理</a><br/></li>
+<li><a href="http://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population">美国各州及领土人口</a><br/></li>
+<li><a href="http://www.khanacademy.org/math/statistics/v/central-limit-theorem">中心极限定理</a><br/></li>
+</ul>
+
+<p>本章使用的R命令  </p>
+
+<ul>
+<li>length(). 获得向量中的元素数量.<br/></li>
+<li>mean(). 算术平均值或者一系列值的均值<br/></li>
+<li>quantile(). 基于百分比或比例计算分割点.<br/></li>
+<li>replicate(). 多次运行一条语句/计算.<br/></li>
+<li>sample(). 在向量中随机抽取元素.<br/></li>
+<li>sd(). 计算标准差.<br/></li>
+<li>sqrt(). 计算平方根.<br/></li>
+<li>summary(). 返回向量的描述性信息.<br/></li>
+</ul>
+
+</body>
+
+</html>
+
