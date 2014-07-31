@@ -20,8 +20,7 @@ Joseph J. Allaire 作为一个连续创业家和软件工程师，开发了一系列著名软件，包括Cold
 
 ![](./img/9-1.jpg)
 
-
-```r
+```{r}
 MyMode <- function(myVector)
 {
   return(myVector)
@@ -33,14 +32,9 @@ MyMode <- function(myVector)
 关于函数，有几点需要注意。首先、第一行中圆括号括起来的（myVector）表示函数的“参数”，或者说输入。之前当我们调用类似mean（）和median（）等函数时就遇到过“参数”这个概念。其次、注意第二行和最后一行的大括号，在函数中，这些大括号都是成对出现的。最后、注意函数接近末尾的return（）语句，这是将函数完成结果返回的地方。一会当我们在R控制台中调用这个函数时就能看到，返回结果就是return（）语句中括号里的东西。
 
 基于这些说明，你现在知道前面的这个MyMode（）函数做了什么了吗？这个函数其实对我们传入的参数myVector未做任何改动。顺便说一下，写代码时一种常用的方式就是这么一点一点的实现代码。这样我们可以测试每一步都能得到什么样的结果。我们现在就可以测试一下目前的函数能干什么。首先，我们创建一个小的向量。在R-studio的左下角可以看到一个常规的R控制台正在运行。像前面几章一样，在里面输入R命令：
-
-```r
+```{r}
 tinyData <- c(1,2,1,2,3,3,3,4,5,4,5)
 tinyData
-```
-
-```
-##  [1] 1 2 1 2 3 3 3 4 5 4 5
 ```
 然后我们就可以试试我们写的MyMode（）函数：
 
@@ -49,17 +43,11 @@ tinyData
    Error: could not find function "MyMode"
 
 噢，出错了！R还不知道我们的新函数呢。我们虽然在代码窗口输入了MyMode（）函数，但是还没有告诉R呢。查看左上角的窗口，你可以看到MyMode（）函数的代码，以及在代码上方的工具栏中有一些小的按钮，其中有一个旁边写着“Run”的向右的箭头。选中MyMode()函数的所有代码（从字面“M”到最后的大括号），然后点击Run按钮，你就会立即看到下方的R控制台中出现了相同的代码。如果所有的代码都是正确的，控制台就不会报错或者警告。点击Run按钮后，R编译器就知道了MyMode（）函数，并且准备使用了。再在控制台中输入：
-
-```r
+```{r}
 MyMode(tinyData)
 ```
-
-```
-##  [1] 1 2 1 2 3 3 3 4 5 4 5
-```
 程序将返回我们所期望的tinyData的内容。这个例子中，tinyData就是函数的输入参数，从这个例子我们就可以看出函数的参数是如何工作的。当函数运行时，其将tinyData的内容复制到myVector中，以方便函数中使用。现在，我们在函数中新添加一条语句：
-
-```r
+```{r}
 MyMode <- function(myVector)
 {
   uniqueValues <- unique(myVector)
@@ -67,17 +55,11 @@ MyMode <- function(myVector)
 }
 ```
 我们将原来的MyMode函数进行了轻微的改动，结果如上所述。我们只在原函数中加了一行代码，避免函数变得过于复杂。我们先来看看这段代码都干些什么。首先不要忘了选中代码然后点击“Run”按钮，然后在R控制台中再次输入MyMode（）命令：
-
-```r
+```{r}
 MyMode(tinyData)
 ```
-
-```
-## [1] 1 2 3 4 5
-```
 代码的作用非常明显，我们调用了unique()函数，其返回在tinyData中出现的数值的列表，这个列表中每个数值只出现一次。简单的说，unique()函数就是将输入向量中多余的数值去掉。接下来我们让代码更复杂一点：
-
-```r
+```{r}
 MyMode <- function(myVector)
 {
   uniqueValues <- unique(myVector)
@@ -86,13 +68,8 @@ MyMode <- function(myVector)
 }
 ```
 仍然别忘了在使用这个函数前要选中代码然后点击“Run”。这次我们将tinyData作为输入参数传给函数，得到的返回值也是一个有5个元素的列表，但是列表的元素表示的是输入参数中每个数值出现的次数：
-
-```r
+```{r}
 MyMode(tinyData)
-```
-
-```
-## [1] 2 2 3 2 2
 ```
 现在差不多该结束我们的MyMode()函数了，但是我们得确保理解了uniqueValues和uniqueCounts中的内容：
 
@@ -105,8 +82,7 @@ MyMode(tinyData)
 uniqueValues[which.max(uniqueCounts)]
 
 其中，whicn.max()函数用来找到uniqueCounts中最大数在数组中的下标，然后在uniqueValues中通过一对方括号就能访问方括号中下标对应的元素。例如uniqueValues[5]就能得到uniqueValues中的第5个数。我们把这条语句加到return语句中，来完成我们的函数：
-
-```r
+```{r}
 MyMode <- function(myVector)
 {
   uniqueValues <- unique(myVector)
@@ -115,89 +91,35 @@ MyMode <- function(myVector)
 }
 ```
 现在我们准备再次测试这个函数，注意不要忘了选中所有代码然后运行一下，否则编译器记住的只是旧的那个函数。我们先回忆一下tinyData中都有些什么元素，然后再把tinyData作为参赛传给函数：
-
-```r
+```{r}
 tinyData
-```
-
-```
-##  [1] 1 2 1 2 3 3 3 4 5 4 5
-```
-
-```r
 MyMode(tinyData)
-```
-
-```
-## [1] 3
 ```
 可以看出，函数工作正常。tinyData数组中出现最多的数是3。我们继续测试看看函数还会发生什么：
-
-```r
+```{r}
 tinyData <- c(tinyData,5,5,5)
 tinyData
-```
-
-```
-##  [1] 1 2 1 2 3 3 3 4 5 4 5 5 5 5
-```
-
-```r
 MyMode(tinyData)
-```
-
-```
-## [1] 5
 ```
 我们向tinyData数组末尾中添加了三个5，现在tinyData中有五个5，MyMode()函数也执行成功。我们在继续测试：
-
-```r
+```{r}
 tinyData <- c(tinyData,1,1,1)
 tinyData
-```
-
-```
-##  [1] 1 2 1 2 3 3 3 4 5 4 5 5 5 5 1 1 1
-```
-
-```r
 MyMode(tinyData)
-```
-
-```
-## [1] 1
 ```
 你会发现这很奇怪，现在tinyData中明明是1和5都有五个，但是函数返回的的确是1。其实你完全不必惊讶，which.max()函数的说明文档里已经写清楚了，这个函数会返回其找到的第一个最大值。所以出现上面的结果是情理之中的事。事实上，这也总是统计学中常见的一个问题：数据集中不止一个模式。我们的MyMode()函数还无法实现这样的功能，也不能给出任何警告说明数据中出现次数最多的数不止一个，而只是简单的返回其中找到的第一个。
 这函数中还有另一个问题：
-
-```r
+```{r}
 tinyData <- c(tinyData,9,9,9,9,9,9,9)
 MyMode(tinyData)
-```
-
-```
-## [1] NA
-```
-
-```r
 tabulate(tinyData)
 ```
-
-```
-## [1] 5 2 3 2 5 0 0 0 7
-```
 第一行代码中，我们在tinyData后面加了一连串“9”，注意tinyData中没有6,7,8。而我们运行MyMode()却返回“NA”，这在R中表示某处出错了，你得到了一个空的值。如果我们不输入最后的“tabulate(tinyData)”语句，很难看出程序为什么会出现这么怪异的行为。我们先来看看都发生了什么：在MyMode()函数中运行的时候，tabulate()产生的数组的长度不是我们想的那样———有多少个不同的数，数组就多长。这是因为tabulate()函数会将6,7,8等这些不存在的数都置为0。tabulate()返回的结果中，最大数7（代表tinyData中9出现的次数）出现在末尾；而再查看unique()函数的返回结果：
-
-```r
+```{r}
 unique(tinyData)
 ```
-
-```
-## [1] 1 2 3 4 5 9
-```
 可以看到unique()函数的返回结果中只有6个元素，这和tabulate()的返回结果不匹配（你可以想象一下前面一页那个表中最后两行长度不一样的情况）。我们可以添加额外的match()函数来解决这个问题：
-
-```r
+```{r}
 MyMode <- function(myVector)
 {
   uniqueValues <- unique(myVector)
@@ -206,13 +128,8 @@ MyMode <- function(myVector)
 }
 ```
 新添加match(myVector,uniqueValues)保证了传入tabulate()的参数是myVector和uniquValues数组“match”的结果，而不再是uniqueValues中所有可能的，即使myVector中没有的结果。现在我们在调用MyMode()函数就能得到正确的结果：
-
-```r
+```{r}
 MyMode(tinyData)
-```
-
-```
-## [1] 9
 ```
 可以看到，程序输出了我们期望的结果。当我们在tinyData数组后面加了七个9之后，函数输出也输出正确结果：9。
 
@@ -227,48 +144,22 @@ MyMode(tinyData)
 在“Packages”编辑框中输入想安装的包的名字就可以开始安装这个包了。或许你记不清包的完整的名称，你只需输入前几个字母，R-studio就会自动列出所有匹配的包，从列表中选择你需要的即可。安装过程中可能会弹出“Install Dependencies”的勾选框，如果弹出来了，选上即可。这是因为在有些情况下，安装R的包需要依赖其他包，R-studio会自动按照正确的顺序将所有必需的包都安装上。点击“Install”后，你会发现R控制台（左下角窗口）中运行了一些命令。通常情况下，这个安装过程不会出现问题，你也看不到任何警告信息。安装完成后，再次查看右下角的窗口（注意选择“Packages”标签），你就会发现modeest包已经在列表中了。然后选中旁边的勾选框，这会自动调用library()函数，然后你就可以使用modeest这个包了。
 
 我们先来试试mfv()函数，这个函数返回一个向量中出现次数最多的数，这个功能也是我们在函数中经常用到的：
-
-
-```r
+```{r,echo = FALSE,results='hide',warning=FALSE,message=FALSE}
+library("modeest", lib.loc="d:/Program Files/R/R-3.1.0/library")
+```
+```{r}
 mfv(tinyData)
 ```
 
-```
-## [1] 9
-```
-
 到目前为止一切都很顺利，这个函数似乎和我们的MyMode()函数做了一样的事，尽管其方法可能不一样。事实上，想知道这个函数是怎么实现的也非常简单，只需在R命令行中输入函数名字即可：
-
-```r
+```{r}
 mfv
 ```
-
-```
-## function (x, ...) 
-## {
-##     f <- factor(x)
-##     tf <- tabulate(f)
-##     return(as.numeric(levels(f)[tf == max(tf)]))
-## }
-## <environment: namespace:modeest>
-```
 这是开源程序最棒的一件事：你可以轻松的查看底层的具体实现。注意到尽管这个函数也是用了tabulate()函数，但其方法和和我们的MyMode()函数完全不同。最后一行以“environment”开头的信息在更加复杂的编程中非常重要，因为其指明了函数mfv()是来自哪里。这个函数的其他方面就不是特别明显了，其中还有一个特点是当你输入的参数列表中出现次数最多的数不止一个时，函数会正确返回所有出现次数最多的数，比如输入以下向量：
-
-```r
+```{r}
 multiData <- c(1,5,7,7,9,9,10)
 mfv(multiData)
-```
-
-```
-## [1] 7 9
-```
-
-```r
 MyMode(multiData)
-```
-
-```
-## [1] 7
 ```
 上面第一语句中，我们输入了一个新的向量，其中数字7和9出现次数最多，都为两次，而其他数则只出现了一次。当我们调用mfv()函数来处理这个向量是，mfv()函数能正确返回7和9这两个数，而是用MyMode()函数，则只能返回第一次找到的出现最多的数，也就是7。
 
